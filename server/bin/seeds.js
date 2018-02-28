@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
-const Ingredient = require('../models/brain');
-const {dbURL} = require('./config');
+const Frases = require('../models/Brain');
+const {dbURL} = require('../config');
 
 mongoose.connect(dbURL);
 
@@ -31,3 +31,10 @@ const tags = [
         ]
     }
 ]
+
+Frases.collection.drop();
+
+Frases.create(tags, (err) => {
+    if (err) { throw(err) }
+    console.log(`Created ${tags.length} phreses`)
+  });
