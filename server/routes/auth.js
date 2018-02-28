@@ -23,7 +23,7 @@ router.post('/signup', (req, res, next) => {
       const theUser = new User({
         username,
         password: hashPass,
-        laguages:[laguages],
+        languages:[languages],
         gender,
         age
       });
