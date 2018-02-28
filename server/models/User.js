@@ -25,7 +25,7 @@ const userSchema = new Schema({
     type: String,
     enum : ['M', 'F'],
   },
-  age: Number
+  age: String
 
 }, {
   timestamps: {
