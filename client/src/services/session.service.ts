@@ -46,6 +46,7 @@ export class SessionService {
   }
 
   signup(username:string, password:string,language:string,gender:string,age:string):Observable<any>{
+    console.log(username,password,language,gender,age)
     return this.http.post(`${this.BASEURL}/api/auth/signup`, {username,password,language,gender,age}, this.options)
       .map(res => res.json())
       .map(this.configureUser(true))

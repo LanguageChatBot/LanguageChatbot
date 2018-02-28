@@ -26,7 +26,7 @@ export class LoginFormComponent implements OnInit {
   }
 
   signup(){
-    this.session.signup(this.username,this.password,this.language,this.age,this.gender)
+    this.session.signup(this.username,this.password,this.language,this.gender,this.age)
     .catch(e => this.error = e)
     .subscribe();
   }
