@@ -1,0 +1,42 @@
+.chat{
+    padding: 20px;
+    width: 400px;
+    margin: 0 auto;
+}
+.conversations{
+    border: 1px solid black;
+    padding: 20px;
+}
+.sender{
+    display: flex;
+}
+input{
+    font-size: 20px;
+    width: 80%;
+}
+button{
+    width: 20%;
+}
+
+
+.mensaje{
+    color: black;
+}
+.me{
+    text-align: right;
+}
+.other{
+    text-align: left;
+}
+.me .text{
+    background: lightgray;
+}
+.other .text{
+    background: lightgreen;
+}
+
+.text{
+    padding: 8px 20px;
+    border-radius: 10px;
+    display: inline-block;
+}

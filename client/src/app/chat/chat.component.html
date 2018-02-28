@@ -1,0 +1,13 @@
+<div class="chat">
+  <div class="conversations">
+    <div class="mensaje" *ngFor="let m of chat.mensajes">
+      <div [ngClass]="m.type">
+          <div class="text">{{m.mensaje}}</div>
+      </div>
+    </div>
+  </div>
+  <div class="sender">
+    <input type="text" [(ngModel)]="toSend" />
+    <button (click)="sendMessage()">Enviar</button>
+  </div>
+</div>
