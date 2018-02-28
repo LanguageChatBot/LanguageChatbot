@@ -10,6 +10,9 @@ export class LoginFormComponent implements OnInit {
 
   username:string;
   password:string;
+  language:string;
+  age:string;
+  gender:string;
   error:string;
   constructor(public session:SessionService) { }
 
@@ -23,7 +26,7 @@ export class LoginFormComponent implements OnInit {
   }
 
   signup(){
-    this.session.signup(this.username,this.password)
+    this.session.signup(this.username,this.password,this.language,this.age,this.gender)
     .catch(e => this.error = e)
     .subscribe();
   }

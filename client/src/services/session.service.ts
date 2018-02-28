@@ -6,7 +6,11 @@ import { Observable } from 'rxjs/Rx';
 
 interface User {
   username:string,
-  password:string
+  password:string,
+  lenguage:string,
+  age:string,
+  gender:string,
+  error:string
 }
 
 @Injectable()
@@ -41,8 +45,8 @@ export class SessionService {
     return Observable.throw(e.json().message);
   }
 
-  signup(username:string, password:string):Observable<any>{
-    return this.http.post(`${this.BASEURL}/api/auth/signup`, {username,password}, this.options)
+  signup(username:string, password:string,language:string,gender:string,age:string):Observable<any>{
+    return this.http.post(`${this.BASEURL}/api/auth/signup`, {username,password,language,gender,age}, this.options)
       .map(res => res.json())
       .map(this.configureUser(true))
       .catch(this.handleError);
