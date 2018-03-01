@@ -17,7 +17,7 @@ export class ChatService {
             console.log("Mensaje recibido");
             this.mensajes.push({
                 mensaje:m.mensaje,
-                type:'other'
+                type:'other',
             })
         })
     }
@@ -29,7 +29,8 @@ export class ChatService {
         });
         this.mensajes.push({
             mensaje:m,
-            type:'me'
+            type:'me',
         })
+        //console.log(this.mensajes);
     }
 }

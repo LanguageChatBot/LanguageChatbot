@@ -5,7 +5,8 @@ const brainSchema = new Schema({
 
   tag:[String],
   question:[{value:String,tag:String}],
-  answer:[{value:String,tag:String}]
+  answer:[{value:String,tag:String}],
+  reply:[{value:String,tag:String}]
 }
 );
 

@@ -2,14 +2,25 @@ const Frases = require("./models/Brain");
 
 module.exports = word => {
   return new Promise((resolve, reject) => {
+    if(word == 'play'){
+        Frases.findOne({ tag: 'game' }).then(function(res) {
+          let result =
+            res.reply[Math.floor(Math.random() * res.reply.length)].value;
+          resolve(result);
+        });
+    }
+    if(word.charAt(word.length-1)=='?'){
+      Frases.findOne({ "question.value": word }).then(function(res) {
+        Frases.findOne({ tag: res.tag }).then(function(res) {
+          let result =
+            res.reply[Math.floor(Math.random() * res.reply.length)].value;
+          resolve(result);
+        });
+      });}
     Frases.findOne({ "answer.value": word }).then(function(res) {
-      console.log(res.tag);
       Frases.findOne({ tag: res.tag }).then(function(res) {
-        console.log(res);
-        console.log("entramos en la fun");
-        console.log(Math.floor(Math.random() * res.answer.length));
         let result =
-          res.answer[Math.floor(Math.random() * res.answer.length)].value;
+          res.question[Math.floor(Math.random() * res.question.length)].value;
         resolve(result);
       });
     });
