@@ -35,10 +35,11 @@ const tags = [
     },
     {
         tag:['negative'],
-        question:[{value:'how are you?',tag:'feeling'}],
+        question:[{value:'why?',tag:'feeling'}],
         answer:[
             {value:'bad',tag:'negative'},
             {value:'not so good',tag:'negative'},
+            {value:'sad',tag:'negative'}
         ]
     },
     {
