@@ -16,14 +16,17 @@ module.exports = word => {
             res.reply[Math.floor(Math.random() * res.reply.length)].value;
           resolve(result);
         });
-      });}
-    Frases.findOne({ "answer.value": word }).then(function(res) {
-      Frases.findOne({ tag: res.tag }).then(function(res) {
+      });
+    }
+    Frases.findOne({ "answer.value": word })
+    .then(function(res) {
+      Frases.findOne({ tag: res.tag })
+      .then(function(res) {
         let result =
           res.question[Math.floor(Math.random() * res.question.length)].value;
         resolve(result);
-      });
+      })
     })
-    .catch( reject("Could you repeat again?"))//No Tag found
+    .catch(e => reject("Could you repeat again?"))//No Tag found;
   });
 };
