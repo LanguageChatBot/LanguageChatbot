@@ -61,6 +61,12 @@ const tags = [
         ]
     },
     {
+        tag:['because'],
+        question:[{value:'',tag:''}],
+        answer:[{value:'',tag:''}],
+        reply:[{value:'',tag:''}],
+    },
+    {
         tag:['game'],
         question:[{value:'we play?',tag:'game'}],
         answer:[{value:'yes',tag:'game'}],
