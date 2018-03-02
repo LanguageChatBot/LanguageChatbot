@@ -8,9 +8,15 @@ module.exports = io => {
     socket.on("chat-ready", m => {
       //console.log(m);
       //console.log(m.mensaje);
-      Word(m.mensaje.toLowerCase()).then(result => {
+      Word(m.mensaje)
+       .then(result => {
+        console.log(result);
         socket.emit("chat", { status: "Mensaje recibido", mensaje: result });
-      });
+       })
+       .catch(result => {
+        console.log(result);
+        socket.emit("chat", { status: "Mensaje recibido", mensaje: result });
+       })
     });
   });
 };

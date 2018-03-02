@@ -1,36 +1,14 @@
-<h1> Authentication Sample </h1>
-<div *ngIf="!session.getUser()">
-  <form>
+
+
+<form>
     <h2> Login or Signup </h2>
     <label> Username </label>
     <input type="text" [(ngModel)]="username" name="username"/>
     <br>
     <label> Password </label>
     <input type="password" [(ngModel)]="password" name="password"/>
-    <br>
-    <label> Language to learn</label>
-    <select name="language" [(ngModel)]="language">
-        <option value="it">Italiano</option>
-        <option value="en">Inglese</option>
-      </select>
-    <br>
-    <label> Gender </label>
-  <select name="gender" [(ngModel)]="gender">
-      <option value="M">M</option>
-      <option value="F">F</option>
-    </select>
-    <br>
-    <label> Birth date </label>
-    <input type="date" [(ngModel)]="age" name="age"/>
     <div>
-    <button (click)="login()"> login </button>
-    <button (click)="signup()"> signup </button>
+      <button (click)="login()"> login </button>
     </div>
-  </form>
-  <p *ngIf="error" class="error"> {{ error }} </p>
-</div>
-
-<div *ngIf="session.getUser()">
-  <pre> {{ session.getUser() | json }} </pre>
-  <button (click)="logout()"> Logout </button>
-</div>
+</form>
+  <!--p *ngIf="error" class="error"> {{ error }} </p-->

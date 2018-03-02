@@ -23,6 +23,7 @@ module.exports = word => {
           res.question[Math.floor(Math.random() * res.question.length)].value;
         resolve(result);
       });
-    });
+    })
+    .catch( reject("Could you repeat again?"))//No Tag found
   });
 };

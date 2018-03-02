@@ -10,19 +10,23 @@ import { HttpModule } from '@angular/http';
 import { HomeComponent } from './home/home.component';
 import { RouterModule } from '@angular/router';
 import { routes } from './routes';
+import { NgSemanticModule } from 'ng-semantic';
+import { SingupFormComponent } from './singup-form/singup-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ChatComponent,
     LoginFormComponent,
-    HomeComponent
+    HomeComponent,
+    SingupFormComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    NgSemanticModule
   ],
   providers: [ChatService,SessionService],
   bootstrap: [AppComponent]
