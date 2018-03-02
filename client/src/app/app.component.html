@@ -1,6 +1,18 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1> Welcome to {{ title }}! </h1>
-</div>
+<sm-menu title="{{ title }}"  class="inverted teal" logo="">
 
+    <!--a sm-item *ngFor="let item of items" [icon]="item.icon">{{item?.title}}</a-->
+    <a sm-item [routerLink]="['/home']" [icon]="">Home</a>
+    <a sm-item [routerLink]="['/chat']" [icon]="">Chat</a>
+    <sm-menu *ngIf="!session.getUser()" class="menu right secondary">
+        <a sm-item [routerLink]="['/login']" [icon]="">Login</a>
+        <a sm-item [routerLink]="['/singout']" [icon]="">SingUp</a>
+    </sm-menu>
+    <sm-menu *ngIf="session.getUser()" class="menu right secondary">
+        <a sm-item href="#/elements/menu" 
+            image="http://semantic-ui.com/images/avatar/small/stevie.jpg">{{session.getUser().username}}</a>
+        <a sm-item (click)="logout()" [icon]="">SingOut</a>
+        <a sm-item icon="sidebar big"></a>
+    </sm-menu>
+</sm-menu>
 <router-outlet></router-outlet>
