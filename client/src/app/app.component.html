@@ -1,5 +1,5 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<sm-menu title="{{ title }}"  class="inverted teal" logo="">
+<sm-menu title="{{ title }}" class="inverted teal" logo="">
 
     <!--a sm-item *ngFor="let item of items" [icon]="item.icon">{{item?.title}}</a-->
     <a sm-item [routerLink]="['/home']" [icon]="">Home</a>
@@ -9,8 +9,7 @@
         <a sm-item [routerLink]="['/singout']" [icon]="">SingUp</a>
     </sm-menu>
     <sm-menu *ngIf="session.getUser()" class="menu right secondary">
-        <a sm-item href="#/elements/menu" 
-            image="http://semantic-ui.com/images/avatar/small/stevie.jpg">{{session.getUser().username}}</a>
+        <a sm-item href="#/elements/menu" image="http://semantic-ui.com/images/avatar/small/stevie.jpg">{{session.getUser().username}}</a>
         <a sm-item (click)="logout()" [icon]="">SingOut</a>
         <a sm-item icon="sidebar big"></a>
     </sm-menu>
