@@ -13,6 +13,7 @@ import { routes } from './routes';
 import { NgSemanticModule } from 'ng-semantic';
 import { SingupFormComponent } from './singup-form/singup-form.component';
 import { AnimationComponent } from './animation/animation.component';
+import { ProfileComponent } from './profile/profile.component';
 
 
 
@@ -23,7 +24,8 @@ import { AnimationComponent } from './animation/animation.component';
     LoginFormComponent,
     HomeComponent,
     SingupFormComponent,
-    AnimationComponent
+    AnimationComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

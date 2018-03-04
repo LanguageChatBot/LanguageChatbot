@@ -70,7 +70,7 @@ const tags = [
         tag:['game'],
         question:[{value:'we play?',tag:'game'}],
         answer:[{value:'yes',tag:'game'}],
-        reply:[{value:'https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb'}]
+        reply:[{value:'https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb',tag:'house'}]
     },{
         tag:['placesToBuy'],
         question:[{value:'Where do you usually go?',tag:'placesToBuy'},

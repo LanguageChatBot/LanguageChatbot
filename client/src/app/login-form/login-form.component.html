@@ -1,19 +1,22 @@
-<div class="container">
-  <div class="row text-center">
-    <div class="card center bg-light" style="margin-top:17px">
-      <form class="form-signin">
-        <h2 class="h3 mb-3 font-weight-normal"> Please log in</h2>
-        <label class="sr-only"> Username </label>
-        <input class="form-control" placeholder="Username" type="text" [(ngModel)]="username" name="username" />
-        <label class="sr-only"> Password </label>
-        <input class="form-control" placeholder="Password" type="password" [(ngModel)]="password" name="password" />
-        <br>
-        <p class="alert alert-danger" *ngIf="error"> {{ error }} </p>
+<section class="section">
+  <div class="container">
+    <div class="row text-center">
+      <div class="card center bg-light" style="margin-top:17px">
+        <form class="form-signin">
+          <img src="https://openclipart.org/image/2400px/svg_to_png/290797/happy_robot_remix_monsterbraingames.png" height="150" width="150">
+          <h2 class="h3 mb-3 font-weight-normal"> Please log in</h2>
+          <label class="sr-only"> Username </label>
+          <input class="form-control" placeholder="Username" type="text" [(ngModel)]="username" name="username" />
+          <label class="sr-only"> Password </label>
+          <input class="form-control" placeholder="Password" type="password" [(ngModel)]="password" name="password" />
+          <br>
+          <p class="alert alert-danger" *ngIf="error"> {{ error }} </p>
 
-        <div>
-          <button class="btn btn-lg btn-primary btn-block" (click)="login()" style="margin-bottom:16px"> login </button>
-        </div>
-      </form>
+          <div>
+            <button class="btn btn-lg btn-primary btn-block" (click)="login()" style="margin-bottom:16px"> login </button>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
-</div>
+</section>

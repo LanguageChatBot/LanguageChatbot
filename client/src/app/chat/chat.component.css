@@ -1,7 +1,6 @@
 .chat{
     padding: 20px;
     margin: 0 auto;
-    height: 100%;
 }
 .conversations{
     padding: 20px;
@@ -41,4 +40,8 @@ button{
     padding: 8px 20px;
     border-radius: 15px;
     display: inline-block;
+}
+
+img{
+    border-radius: 15px;
 }
