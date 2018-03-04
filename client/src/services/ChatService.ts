@@ -4,6 +4,7 @@ import * as io from 'socket.io-client';
 interface Message {
     mensaje:string;
     type:string;
+    isImage:boolean;
 }
 
 @Injectable()
@@ -18,6 +19,7 @@ export class ChatService {
             this.mensajes.push({
                 mensaje:m.mensaje,
                 type:'other',
+                isImage:m.isImage,
             })
         })
     }
@@ -30,6 +32,7 @@ export class ChatService {
         this.mensajes.push({
             mensaje:m,
             type:'me',
+            isImage:false,
         })
         //console.log(this.mensajes);
     }
