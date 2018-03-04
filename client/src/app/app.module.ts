@@ -12,6 +12,9 @@ import { RouterModule } from '@angular/router';
 import { routes } from './routes';
 import { NgSemanticModule } from 'ng-semantic';
 import { SingupFormComponent } from './singup-form/singup-form.component';
+import { AnimationComponent } from './animation/animation.component';
+
+
 
 @NgModule({
   declarations: [
@@ -19,7 +22,8 @@ import { SingupFormComponent } from './singup-form/singup-form.component';
     ChatComponent,
     LoginFormComponent,
     HomeComponent,
-    SingupFormComponent
+    SingupFormComponent,
+    AnimationComponent
   ],
   imports: [
     BrowserModule,

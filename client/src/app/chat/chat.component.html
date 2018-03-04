@@ -3,8 +3,8 @@
     <div class="mensaje" *ngFor="let m of chat.mensajes">
       <div [ngClass]="m.type">
           <div class="text">
-            <p>{{m.mensaje}}</p>
-            <!-- <img src="{{m.mensaje}}" alt="game" height="50" width="50"> -->
+            <p *ngIf="!m.isImage">{{m.mensaje}}</p>
+            <img *ngIf="m.isImage" src="{{m.mensaje}}" alt="game" height="50" width="50"> 
           </div>
       </div>
     </div>
