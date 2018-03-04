@@ -71,6 +71,28 @@ const tags = [
         question:[{value:'we play?',tag:'game'}],
         answer:[{value:'yes',tag:'game'}],
         reply:[{value:'https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb'}]
+    },{
+        tag:['placesToBuy'],
+        question:[{value:'Where do you usually go?',tag:'placesToBuy'},
+                  {value:'What are you going to buy?',tag:''}],
+        answer:[
+            {value:'supermarket',tag:'placesToBuy'},
+            {value:'mall',tag:'placesToBuy'},
+        ]
+    },{
+        tag:['placesToEnjoy'],
+        question:[{value:'Can I join to you?',tag:'positive'}],
+        answer:[
+            {value:'cinema',tag:'placesToEnjoy'},
+            {value:'home',tag:'placesToEnjoy'},
+        ]
+    },{
+        tag:['food'],
+        question:[{value:'I love ***',tag:'positive'}],
+        answer:[
+            {value:'bananas',tag:'food'},
+            {value:'oranges',tag:'food'}
+        ]
     }
 ]
 

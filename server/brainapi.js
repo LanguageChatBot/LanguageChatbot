@@ -10,23 +10,23 @@ module.exports = word => {
         });
     }
     if(word.charAt(word.length-1)=='?'){
-      Frases.findOne({ "question.value": word }).then(function(res) {
+      Frases.findOne({ "question.value": word })
+      .then(function(res) {
         Frases.findOne({ tag: res.tag }).then(function(res) {
           let result =
             res.reply[Math.floor(Math.random() * res.reply.length)].value;
           resolve(result);
         });
-      });
-    }
+      });}
+
     Frases.findOne({ "answer.value": word })
-    .then(function(res) {
-      Frases.findOne({ tag: res.tag })
-      .then(function(res) {
+     .then(function(res) {
+      Frases.findOne({ tag: res.tag }).then(function(res) {
         let result =
           res.question[Math.floor(Math.random() * res.question.length)].value;
         resolve(result);
+       });
       })
-    })
-    .catch(e => reject("Could you repeat again?"))//No Tag found;
+     .catch( e => reject("Could you repeit again"))//No Tag found
   });
 };
