@@ -4,11 +4,15 @@
           <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtjC1ue_JBgcpqkfusdsWaehhnHrjx5nZMG76rEZj4hoAm_gMD" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title">Profile</h5>
-            <p class="card-text">USERNAME : {{user.username}}</p>
-            <p class="card-text">GENDER : {{user.gender}}</p>
-            <p class="card-text">AGE : {{user.age}}</p>
-            <p class="card-text">LANGUAGES : {{user.languages}}</p>
-            <a href="#" class="btn btn-primary">Edit</a>
+            <label> Username </label> 
+            <p class="card-text">{{user.username}}</p>
+            <label> Gender </label> 
+            <p class="card-text">{{user.gender}}</p>
+            <label> Age </label> 
+            <p class="card-text">{{user.age}}</p>
+            <label> Languages </label> 
+            <p class="card-text">{{user.languages}}</p>
+            <a [routerLink]="['/edit']" class="btn btn-primary">Edit</a>
           </div>
         </div>
   </div>

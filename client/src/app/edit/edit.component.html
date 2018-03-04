@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row text-center" style="margin-top:17px">
+    <div class="card center" style="width: 18rem;">
+      <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtjC1ue_JBgcpqkfusdsWaehhnHrjx5nZMG76rEZj4hoAm_gMD"
+        alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Profile</h5>
+        <label> Username </label>
+        <input type="text" class="form-control" id="validationCustom01" value="{{user.username}}" required>
+        <label> Gender </label>
+        <select class="form-control" name="gender">
+          <option value="M">M</option>
+          <option value="F">F</option>
+        </select>
+        <label> Age </label>
+        <input class="form-control" type="date" [(ngModel)]="age" name="age" style="margin-bottom:17px" value="{{user.age}}">
+        <label> Languages </label>
+        <select class="form-control" name="language">
+          <option value="it">Italiano</option>
+          <option value="en">Inglese</option>
+        </select>
+        <a [routerLink]="['/profile']" class="btn btn-primary">Save</a>
+      </div>
+    </div>
+  </div>
+</div>

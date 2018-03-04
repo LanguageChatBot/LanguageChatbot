@@ -15,6 +15,7 @@ import { SingupFormComponent } from './singup-form/singup-form.component';
 import { AnimationComponent } from './animation/animation.component';
 import { ProfileComponent } from './profile/profile.component';
 import { TestComponent } from './test/test.component';
+import { EditComponent } from './edit/edit.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { TestComponent } from './test/test.component';
     SingupFormComponent,
     AnimationComponent,
     ProfileComponent,
-    TestComponent
+    TestComponent,
+    EditComponent
   ],
   imports: [
     BrowserModule,

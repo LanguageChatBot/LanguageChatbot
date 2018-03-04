@@ -10,16 +10,9 @@
         <a sm-item [routerLink]="['/singout']" [icon]="">SignUp</a>
     </sm-menu>
     <sm-menu *ngIf="session.getUser()" class="menu right secondary">
-<<<<<<< HEAD
         <a sm-item [routerLink]="['/profile']" image="http://semantic-ui.com/images/avatar/small/stevie.jpg">{{session.getUser().username}}</a>
         <a sm-item (click)="logout()" [icon]="">SignOut</a>
         <a sm-item icon="sidebar big"></a>
-=======
-        <a sm-item href="#/elements/menu" 
-            image="http://semantic-ui.com/images/avatar/small/stevie.jpg">{{session.getUser().username}}</a>
-        <a sm-item (click)="logout()" [icon]="">SingOut</a>
-        <!--a sm-item icon="sidebar big"></a-->
->>>>>>> afc649910744e2c73aac8c96d982046398577974
     </sm-menu>
 </sm-menu>
 <router-outlet></router-outlet>
