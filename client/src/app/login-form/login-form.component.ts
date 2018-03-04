@@ -8,9 +8,6 @@ import { Router } from '@angular/router';
   styleUrls: ['./login-form.component.css']
 })
 export class LoginFormComponent implements OnInit {
-
-
-
   username:string;
   password:string;
   language:string;
@@ -26,11 +23,10 @@ export class LoginFormComponent implements OnInit {
 
   login(){
     console.log("Entramos en login");
-
     this.session.login(this.username,this.password)
     .catch(e => this.error = e)
     .subscribe(user => {
-      this.router.navigate(['/home']);
+      if(user.username!=undefined){this.router.navigate(['/home'])}
       console.log(`Welcome ${user.username}`)});
   }
 

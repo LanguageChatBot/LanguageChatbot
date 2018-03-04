@@ -22,7 +22,7 @@ export class SessionService {
     this.isLoggedIn().subscribe();
   }
 
-  private user:User;
+  public user:User;
 
   getUser(){
     return this.user;

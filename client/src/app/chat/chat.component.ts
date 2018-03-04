@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ChatService } from '../../services/ChatService';
+import { SessionService } from '../../services/session.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-chat',
@@ -9,10 +11,15 @@ import { ChatService } from '../../services/ChatService';
 export class ChatComponent implements OnInit {
   toSend:string;
 
+<<<<<<< HEAD
+  constructor(public chat:ChatService, public session:SessionService, private router:Router) { }
+=======
 
   constructor(public chat:ChatService) { }
+>>>>>>> 44426395d9ea5d19bfbfa596321c1a19a4c0dd46
 
   ngOnInit() {
+    if(this.session.user==undefined){this.router.navigate(['/login'])}
   }
 
   sendMessage(){
