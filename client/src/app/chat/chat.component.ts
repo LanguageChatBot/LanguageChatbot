@@ -9,6 +9,7 @@ import { ChatService } from '../../services/ChatService';
 export class ChatComponent implements OnInit {
   toSend:string;
 
+
   constructor(public chat:ChatService) { }
 
   ngOnInit() {
@@ -19,5 +20,9 @@ export class ChatComponent implements OnInit {
     this.chat.sendMessage(this.toSend);
     this.toSend = "";
   }
+
+
+
+
 
 }
