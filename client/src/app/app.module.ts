@@ -13,7 +13,7 @@ import { routes } from './routes';
 import { NgSemanticModule } from 'ng-semantic';
 import { SingupFormComponent } from './singup-form/singup-form.component';
 import { AnimationComponent } from './animation/animation.component';
-
+import { TestComponent } from './test/test.component';
 
 
 @NgModule({
@@ -23,7 +23,8 @@ import { AnimationComponent } from './animation/animation.component';
     LoginFormComponent,
     HomeComponent,
     SingupFormComponent,
-    AnimationComponent
+    AnimationComponent,
+    TestComponent
   ],
   imports: [
     BrowserModule,
