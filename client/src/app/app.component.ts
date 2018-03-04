@@ -11,7 +11,16 @@ import { Router } from '@angular/router';
 export class AppComponent {
   title = 'app';
   error:string;
-  constructor(public session:SessionService, private router:Router) { }
+
+  /*items: Array<Object> = [
+    {title:'Home', icon:'', url:"['/home']" },
+    {title:'Chat', icon:'', url:'/chat' },
+    {title:'Test', icon:'', url:'/test' }
+
+  ];*/
+
+  constructor(public session:SessionService, private router:Router) { 
+  }
 
   logout(){
     this.session.logout()

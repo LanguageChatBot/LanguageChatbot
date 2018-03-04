@@ -11,11 +11,15 @@ import { Router } from "@angular/router";
 export class ChatComponent implements OnInit {
   toSend: string;
 
+<<<<<<< HEAD
   constructor(
     public chat: ChatService,
     public session: SessionService,
     private router: Router
   ) {}
+=======
+  constructor(public chat:ChatService, public session:SessionService, private router:Router) { }
+>>>>>>> afc649910744e2c73aac8c96d982046398577974
 
   ngOnInit() {
     if (this.session.user == undefined) {

@@ -8,3 +8,29 @@
 	background: -webkit-linear-gradient(-45deg, rgba(26, 188, 156, 1) 0%, rgba(142, 68, 173, 1) 100%);
 	background: linear-gradient(135deg, rgba(26, 188, 156, 1) 0%, rgba(142, 68, 173, 1) 100%);
 }
+
+.text {
+
+	margin-top: 6%;
+	color: rgb(83, 82, 82);
+	font-family: 'Helvetica', sans-serif;
+	text-align: center;
+
+}
+
+.imagen {
+
+	margin: 0 auto;
+	border-radius: 100%;
+
+}
+
+.row {
+
+	margin-top: 8%;
+	margin-bottom: 8%;
+
+}
+
+
+

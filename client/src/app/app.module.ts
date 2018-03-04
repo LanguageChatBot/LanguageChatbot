@@ -14,7 +14,7 @@ import { NgSemanticModule } from 'ng-semantic';
 import { SingupFormComponent } from './singup-form/singup-form.component';
 import { AnimationComponent } from './animation/animation.component';
 import { ProfileComponent } from './profile/profile.component';
-
+import { TestComponent } from './test/test.component';
 
 
 @NgModule({
@@ -25,7 +25,8 @@ import { ProfileComponent } from './profile/profile.component';
     HomeComponent,
     SingupFormComponent,
     AnimationComponent,
-    ProfileComponent
+    ProfileComponent,
+    TestComponent
   ],
   imports: [
     BrowserModule,
