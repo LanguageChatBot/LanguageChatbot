@@ -2,24 +2,25 @@
   <div class="row text-center" style="margin-top:17px">
     <div class="card center" style="width: 18rem;">
       <img *ngIf="!session.getUserGender()" class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtjC1ue_JBgcpqkfusdsWaehhnHrjx5nZMG76rEZj4hoAm_gMD" alt="Card image cap">
-      <img *ngIf="session.getUserGender()" class="card-img-top" src="http://semantic-ui.com/images/avatar/small/stevie.jpg" alt="Card image cap">
-      <div class="card-body">
+      <img *ngIf="session.getUserGender()" class="card-img-top" src="http://semantic-ui.com/images/avatar2/large/kristy.png" alt="Card image cap">
+      <div class="card-body" ng-controller="myController">
         <h5 class="card-title">Profile</h5>
         <label> Username </label>
-        <input type="text" class="form-control" id="validationCustom01" value="{{user.username}}" required>
+        <input type="text" class="form-control" name="username" [(ngModel)]="username" value="{{user.username}}"  required>
         <label> Gender </label>
-        <select class="form-control" name="gender">
+        <select class="form-control" name="gender" [(ngModel)]="gender" >
           <option value="M">M</option>
           <option value="F">F</option>
         </select>
         <label> Age </label>
-        <input class="form-control" type="date" [(ngModel)]="age" name="age" style="margin-bottom:17px" value="{{user.age}}">
+        <input class="form-control" type="date" name="age" style="margin-bottom:17px" [(ngModel)]="age" >
         <label> Languages </label>
-        <select class="form-control" name="language">
+        <select class="form-control" name="language" [(ngModel)]="language" >
           <option value="it">Italiano</option>
           <option value="en">Inglese</option>
         </select>
-        <a [routerLink]="['/profile']" class="btn btn-primary">Save</a>
+        <p *ngIf="error" class="alert alert-danger"> {{ error }} </p>
+        <a (click)="edit()" class="btn btn-primary">Save</a>
       </div>
     </div>
   </div>

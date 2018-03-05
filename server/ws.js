@@ -8,12 +8,9 @@ module.exports = io => {
     console.log("a user connected");
     socket.on("chat-ready", m => {
       //console.log(m);
-      //console.log(m.mensaje);
-
-
-      mainWord(m.mensaje)
+      console.log(m.mensaje);
+      mainWord(m.mensaje.toLowerCase())
       .then(res =>{
-
           if(res.length !=0){
             Word(res[0].text)
             .then(result => {
@@ -25,7 +22,7 @@ module.exports = io => {
              socket.emit("chat", { status: "Mensaje recibido", mensaje: result,isImage:false });
             })
           }else{
-            Word(m.mensaje)
+            Word(m.mensaje.toLowerCase())
             .then(result => {
              console.log(result);
              socket.emit("chat", { status: "Mensaje recibido", mensaje: result.replace('***',m.mensaje),isImage:false });
@@ -34,21 +31,26 @@ module.exports = io => {
              console.log(result);
              socket.emit("chat", { status: "Mensaje recibido", mensaje: result,isImage:false });
             })
-
           }
-
       })
+      //GAME
       .catch(e=>{
-
+        if(m.mensaje.split(' ')[0]=='ris'){
+          Word(m.mensaje.toLowerCase())
+              .then(result => {
+              console.log(result);
+              socket.emit("chat", { status: "Mensaje recibido", mensaje: result.replace('***',m.mensaje),isImage:false });
+          })
+        }
         if(m.mensaje=='play'){
-        Word(m.mensaje)
-        .then(result => {
-         console.log(result);
-         socket.emit("chat", { status: "Mensaje recibido", mensaje: result.replace('***',m.mensaje),isImage:true });
-        })
+            Word(m.mensaje.toLowerCase())
+              .then(result => {
+              console.log(result);
+              socket.emit("chat", { status: "Mensaje recibido", mensaje: result.replace('***',m.mensaje),isImage:true });
+          })
         }
         else{
-        Word(m.mensaje)
+        Word(m.mensaje.toLowerCase())
         .then(result => {
          console.log(result);
          socket.emit("chat", { status: "Mensaje recibido", mensaje: result.replace('***',m.mensaje),isImage:false });
@@ -58,14 +60,7 @@ module.exports = io => {
          socket.emit("chat", { status: "Mensaje recibido", mensaje: result,isImage:false });
         })
         }
-
       })
-
-     
-
-
-
-
     });
   });
 };

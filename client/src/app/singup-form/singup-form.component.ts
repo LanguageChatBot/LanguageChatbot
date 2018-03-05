@@ -23,7 +23,7 @@ export class SingupFormComponent implements OnInit {
   signup(){
     this.session.signup(this.username,this.password,this.language,this.gender,this.age)
     .catch(e => this.error = e)
-    .subscribe(result => {this.router.navigate(['/home'])});
+    .subscribe(result => {if(result === 200)this.router.navigate(['/home'])});
   }
 
 }

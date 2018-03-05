@@ -10,16 +10,10 @@
         <a sm-item [routerLink]="['/singout']" [icon]="">SignUp</a>
     </sm-menu>
     <sm-menu *ngIf="session.getUser()" class="menu right secondary">
-<<<<<<< HEAD
-        <a *ngIf="session.getUserGender()" sm-item [routerLink]="['/profile']" image="http://semantic-ui.com/images/avatar/small/stevie.jpg">{{session.getUser().username}}</a>
+        <a *ngIf="session.getUserGender()" sm-item [routerLink]="['/profile']" image="http://semantic-ui.com/images/avatar2/large/kristy.png">{{session.getUser().username}}</a>
         <a *ngIf="!session.getUserGender()" sm-item [routerLink]="['/profile']" image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtjC1ue_JBgcpqkfusdsWaehhnHrjx5nZMG76rEZj4hoAm_gMD">{{session.getUser().username}}</a>
         <a sm-item (click)="logout()" [icon]="">SignOut</a>
         <a sm-item icon="sidebar big"></a>
-=======
-        <a sm-item [routerLink]="['/profile']" image="http://semantic-ui.com/images/avatar/small/stevie.jpg">{{session.getUser().username}}</a>
-        <a sm-item (click)="logout()" [icon]="">SignOut</a>
-        <!--a sm-item icon="sidebar big"></a-->
->>>>>>> 34c2de8ecc10e2fdd0707fb611ff6f320b7cbbd4
     </sm-menu>
 </sm-menu>
 <router-outlet></router-outlet>

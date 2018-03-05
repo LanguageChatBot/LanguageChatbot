@@ -1,11 +1,18 @@
 const Frases = require("./models/Brain");
+let index = 0;
 
 module.exports = word => {
   return new Promise((resolve, reject) => {
+    if(word.split(' ')[0] == 'ris'){
+      Frases.findOne({ tag: 'game' }).then(function(res) {
+        if(res.reply[index].tag==word.split(' ')[1]){resolve('si');index++;if(index>res.reply.length){index=0}}
+        else{resolve('no')}
+      });
+    }
     if(word == 'play'){
         Frases.findOne({ tag: 'game' }).then(function(res) {
           let result =
-            res.reply[Math.floor(Math.random() * res.reply.length)].value;
+            res.reply[index].value;
           resolve(result);
         });
     }

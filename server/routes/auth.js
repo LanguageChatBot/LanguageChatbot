@@ -11,6 +11,29 @@ let loginPromise = (req, user) => {
   })
 }
 
+/*EDIT*/
+router.put('/edit', (req,res,next)=>{
+  const {username,languages = req.body.language, gender,age} = req.body;;
+  User.findOne({ username }, '_id')
+  .then(foundUser =>{
+    const theUser = new User({
+      username,
+      languages:[languages],
+      gender,
+      age
+    });
+    return theUser.save()
+        .then(user => {
+          debug(`Registered user ${user._id}. Welcome ${user.username}`);
+          res.status(200).json(req.user)
+        }) 
+  })
+  .catch(e => {
+    console.log(e);
+    res.status(500).json(e)
+  }) 
+});
+
 /* SIGNUP */
 router.post('/signup', (req, res, next) => {
   const {username,password,languages = req.body.language, gender,age} = req.body;
