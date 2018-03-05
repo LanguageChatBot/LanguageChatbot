@@ -1,4 +1,4 @@
-
+import { SessionService } from '../../services/session.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -14,8 +14,8 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
 
-  goToHome(color){
-    this.router.navigate(['/about',color]);  // <!-- Programmatically navigate to home
+  goToHome(){
+    // this.router.navigate(['/about',color]);  // <!-- Programmatically navigate to home
   }
 
 }

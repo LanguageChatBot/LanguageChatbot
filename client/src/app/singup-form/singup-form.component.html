@@ -1,40 +1,43 @@
-<div class="container color">
-  <div class="row text-center">
-          <div class="card center bg-light" style="margin-top:17px">
-            <form class="form-signup">
-              <h2> Signup </h2>
-              <label class="sr-only"> Username </label>
-              <input class="form-control" placeholder="Username" type="text" [(ngModel)]="username" name="username" />
-              <br>
-              <label class="sr-only"> Password </label>
-              <input class="form-control" placeholder="Password" type="password" [(ngModel)]="password" name="password" />
-              <br>
-              <div class="form-grup">
-                <label class="sr-only"> Language to learn</label>
-                <select class="form-control" name="language" [(ngModel)]="language">
-                  <option value="it">Italiano</option>
-                  <option value="en">Inglese</option>
-                </select>
-              </div>
-              <br>
-              <div class="form-group">
-                  <label class="sr-only"> Gender </label>
-                  <select class="form-control" name="gender" [(ngModel)]="gender">
-                    <option value="M">M</option>
-                    <option value="F">F</option>
-                  </select>
-              </div>
-              <label class="sr-only"> Birth date </label>
-              <input class="form-control" type="date" [(ngModel)]="age" name="age" style="margin-bottom:17px">
-              <p *ngIf="error" class="alert alert-danger"> {{ error }} </p>
+<section class="section">
+  <div class="container color">
+    <div class="row text-center">
+      <div class="card center bg-light" style="margin-top:17px">
+        <form class="form-signup">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Robot-clip-art-book-covers-feJCV3-clipart.png" alt="" height="150" width="150">
+          <h2> Signup </h2>
+          <label class="sr-only"> Username </label>
+          <input class="form-control" placeholder="Username" type="text" [(ngModel)]="username" name="username" />
+          <br>
+          <label class="sr-only"> Password </label>
+          <input class="form-control" placeholder="Password" type="password" [(ngModel)]="password" name="password" />
+          <br>
+          <div class="form-grup">
+            <label> Language to learn</label>
+            <select class="form-control" name="language" [(ngModel)]="language">
+              <option value="it">Italiano</option>
+              <option value="en">Inglese</option>
+            </select>
+          </div>
+          <br>
+          <div class="form-group">
+            <label> Gender </label>
+            <select class="form-control" name="gender" [(ngModel)]="gender">
+              <option value="M">M</option>
+              <option value="F">F</option>
+            </select>
+          </div>
+          <label> Birth date </label>
+          <input class="form-control" type="date" [(ngModel)]="age" name="age" style="margin-bottom:17px">
+          <p *ngIf="error" class="alert alert-danger"> {{ error }} </p>
           <div *ngIf="session.getUser()">
             <pre> {{ session.getUser() | json }} </pre>
             <button (click)="logout()"> Logout </button>
           </div>
-              <div>
-                <button class="btn btn-lg btn-primary btn-block" (click)="signup()"> signup </button>
-              </div>
-          </form>
+          <div>
+            <button class="btn btn-lg btn-primary btn-block" (click)="signup()"> signup </button>
+          </div>
+        </form>
       </div>
     </div>
-</div>
+  </div>
+</section>

@@ -1,3 +1,41 @@
-<p>
-  test works!
-</p>
+<div class="container ">
+
+<div class="row ">
+
+<div class="col chat">
+
+<div class="card" style="width: 28rem;">
+    <img class="card-img-top" src="http://semantic-ui.com/images/avatar2/large/kristy.png" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Word</h5>
+      <p class="card-text">Some quick description about the meaning of the word guess! just to learn new vocabulary.</p>
+      <a href="#" class="btn btn-primary">Select another word</a>
+    </div>
+  </div>
+
+
+</div>
+
+
+<div class="col">
+<div class="chat">
+    <div class="conversations">
+      <div class="mensaje" *ngFor="let m of chat.mensajes">
+        <div [ngClass]="m.type">
+            <div class="text">
+              <p *ngIf="!m.isImage">{{m.mensaje}}</p>
+              <img *ngIf="m.isImage" src="{{m.mensaje}}" alt="game" height="150" width="150"> 
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="sender">
+      <input class="form-control" type="text" [(ngModel)]="toSend" />
+      <button class="btn btn-secondary" (click)="sendMessage()">Enviar</button>
+    </div>
+  </div>
+
+</div>
+</div> 
+
+</div>

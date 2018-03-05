@@ -1,7 +1,10 @@
 .chat{
     padding: 20px;
     margin: 0 auto;
-    height: 100%;
+    /*overflow-y: scroll;*/
+    /*overflow-y: overlay;*/
+    /*overflow-y: visible;*/
+
 }
 .conversations{
     padding: 20px;
@@ -34,11 +37,15 @@ button{
     background: lightgray;
 }
 .other .text{
-    background: lightgreen;
+    background: rgb(75, 219, 190);
 }
 
 .text{
     padding: 8px 20px;
     border-radius: 15px;
     display: inline-block;
+}
+
+img{
+    border-radius: 15px;
 }

@@ -1,0 +1,13 @@
+.center{
+    padding: 20px;
+    width: 400px;
+    margin: 0 auto;
+  }
+
+.card{
+    padding: 20px;
+}
+
+.container{
+    height: 100%;
+}

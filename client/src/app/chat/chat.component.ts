@@ -1,30 +1,31 @@
-import { Component, OnInit } from '@angular/core';
-import { ChatService } from '../../services/ChatService';
-import { SessionService } from '../../services/session.service';
-import { Router } from '@angular/router';
+import { Component, OnInit } from "@angular/core";
+import { ChatService } from "../../services/ChatService";
+import { SessionService } from "../../services/session.service";
+import { Router } from "@angular/router";
 
 @Component({
-  selector: 'app-chat',
-  templateUrl: './chat.component.html',
-  styleUrls: ['./chat.component.css']
+  selector: "app-chat",
+  templateUrl: "./chat.component.html",
+  styleUrls: ["./chat.component.css"]
 })
 export class ChatComponent implements OnInit {
-  toSend:string;
+  toSend: string;
 
-  constructor(public chat:ChatService, public session:SessionService, private router:Router) { }
+  constructor(
+    public chat: ChatService,
+    public session: SessionService,
+    private router: Router
+  ) {}
 
   ngOnInit() {
-    if(this.session.user==undefined){this.router.navigate(['/login'])}
+    if (this.session.user == undefined) {
+      this.router.navigate(["/login"]);
+    }
   }
 
-  sendMessage(){
+  sendMessage() {
     //console.log(`Enviando mensaje: ${this.toSend}`);
     this.chat.sendMessage(this.toSend);
     this.toSend = "";
   }
-
-
-
-
-
 }
