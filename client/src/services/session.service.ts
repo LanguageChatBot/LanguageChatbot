@@ -40,6 +40,10 @@ export class SessionService {
     }
   }
 
+  getUserGender(){
+    return this.user.gender=='F'?true:false;
+  }
+
   handleError(e) {
     console.log(e);
     return Observable.throw(e.json().message);
