@@ -1,0 +1,56 @@
+.chat{
+  padding: 20px;
+  margin: 0 auto;
+  /*overflow-y: scroll;*/
+  /*overflow-y: overlay;*/
+  /*overflow-y: visible;*/
+
+}
+.conversations{
+  padding: 20px;
+  height: 442px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.sender{
+  display: flex;
+  width: 100%;
+}
+input{
+  font-size: 20px;
+  width: 80%;
+}
+button{
+  width: 20%;
+}
+
+.mensaje{
+  color: black;
+}
+.me{
+  text-align: right;
+}
+.other{
+  text-align: left;
+}
+.me .text{
+  background: lightgray;
+}
+.other .text{
+  background: rgb(75, 219, 190);
+}
+
+.text{
+  padding: 8px 20px;
+  border-radius: 15px;
+  display: inline-block;
+}
+
+img{
+  border-radius: 15px;
+}
+
+.btn-primary{
+  background-color: #00B5AD;
+  border-color: #00B5AD;
+}
