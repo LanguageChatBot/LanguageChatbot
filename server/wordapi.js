@@ -30,7 +30,7 @@ module.exports = sentence => {
           reject()
         }
         else{
-          //console.log(JSON.stringify(res, null, 2));
+          console.log(JSON.stringify(res, null, 2));
           //resolve(res)
           words = [];
           res.keywords.forEach( w => { 

@@ -12,14 +12,12 @@
       <a href="#" class="btn btn-primary">Select another word</a>
     </div>
   </div>
-
-
 </div>
 
 
 <div class="col">
 <div class="chat">
-    <div class="conversations">
+    <div class="conversations" #scrollMe style="overflow: scroll; height: xyz;">
       <div class="mensaje" *ngFor="let m of chat.mensajes">
         <div [ngClass]="m.type">
             <div class="text">
