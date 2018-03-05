@@ -1,6 +1,7 @@
 const Frases = require("./models/Brain");
 const Word = require("./brainapi");
-const mainWord = require("./wordapi");
+const MainWord = require("./wordapi");
+const Grammar = require("./grammarapi");
 
 module.exports = io => {
   console.log("Socket io Ready");
@@ -9,7 +10,22 @@ module.exports = io => {
     socket.on("chat-ready", m => {
       //console.log(m);
       console.log(m.mensaje);
-      mainWord(m.mensaje.toLowerCase())
+      Grammar(m.mensaje)
+       .then( res => {
+
+          if(res.error==true)
+          {
+            console.log(res);
+            socket.emit("chat", { status: "Mensaje recibido", mensaje:res.answer, isImage:false });
+
+          }else{
+            
+          }
+
+
+       })
+
+      /*MainWord(m.mensaje.toLowerCase())
       .then(res =>{
           if(res.length !=0){
             Word(res[0].text)
@@ -32,7 +48,7 @@ module.exports = io => {
              socket.emit("chat", { status: "Mensaje recibido", mensaje: result,isImage:false });
             })
           }
-      })
+      })*/
       //GAME
       .catch(e=>{
         if(m.mensaje.split(' ')[0]=='ris'){
