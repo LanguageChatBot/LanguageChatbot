@@ -6,6 +6,11 @@
     /*overflow-y: visible;*/
 
 }
+
+pre{
+    font-family: Helvetica, sans-serif;
+}
+
 .conversations{
     padding: 20px;
     height: 442px;
