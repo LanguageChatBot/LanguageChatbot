@@ -6,6 +6,7 @@
     "start": "nodemon ./bin/www"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "bcrypt": "^1.0.3",
     "body-parser": "~1.17.1",
     "connect-mongo": "^2.0.1",
@@ -22,6 +23,7 @@
     "morgan": "~1.8.1",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
+    "request": "^2.83.0",
     "serve-favicon": "~2.4.2",
     "socket.io": "^2.0.4",
     "watson-developer-cloud": "^3.0.7"
