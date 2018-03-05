@@ -8,11 +8,11 @@ const tags = [
     {
         tag:['welcome'],
         question:[
-            {value:'how are you?',tag:'welcome'},
-            {value:'hi, how are you?',tag:'welcome'},
-            {value:'hello, how are you?',tag:'welcome'},
-            {value:'hey!!, how are you?',tag:'welcome'},
-            {value:'wassup!, ,how are you?',tag:'welcome'}
+            {value:'how are you?, I\'m languinator I want help you to learn lenguages, if you want to train your vocabulary type play and I\'ll show you same picture and you have to guess the word',tag:'welcome'},
+            {value:'hi, how are you, I\'m languinator I want help you to learn lenguages, if you want to train your vocabulary type play and I\'ll show you same picture and you have to guess the word ?',tag:'welcome'},
+            {value:'hello, how are you, I\'m languinator I want help you to learn lenguages, if you want to train your vocabulary type play and I\'ll show you same picture and you have to guess the word ?',tag:'welcome'},
+            {value:'hey!!, how are you, I\'m languinator I want help you to learn lenguages, if you want to train your vocabulary type play and I\'ll show you same picture and you have to guess the word ?',tag:'welcome'},
+            {value:'wassup!, how are you, I\'m languinator I want help you to learn lenguages, if you want to train your vocabulary type play and I\'ll show you same picture and you have to guess the word ?',tag:'welcome'}
         ],
         answer:[
             {value:'hi',tag:'welcome'},

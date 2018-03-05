@@ -27,7 +27,6 @@ export class ChatService {
   }
 
   sendMessage(m: string) {
-    console.log(img);
     if (img == true) {
       this.socket.emit("chat-ready", {
         status: "Mensaje recibido",

@@ -15,7 +15,6 @@ export class HomeComponent implements OnInit {
   }
 
   goToHome(){
-    // this.router.navigate(['/about',color]);  // <!-- Programmatically navigate to home
   }
 
 }

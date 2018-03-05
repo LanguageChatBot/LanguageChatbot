@@ -9,7 +9,7 @@ module.exports = io => {
     socket.on("chat-ready", m => {
       //console.log(m);
       console.log(m.mensaje);
-      mainWord(m.mensaje.toLowerCase())
+      mainWord(m.mensaje.toLowerCase().trim())
       .then(res =>{
           if(res.length !=0){
             Word(res[0].text)
@@ -22,7 +22,7 @@ module.exports = io => {
              socket.emit("chat", { status: "Mensaje recibido", mensaje: result,isImage:false });
             })
           }else{
-            Word(m.mensaje.toLowerCase())
+            Word(m.mensaje.toLowerCase().trim())
             .then(result => {
              console.log(result);
              socket.emit("chat", { status: "Mensaje recibido", mensaje: result.replace('***',m.mensaje),isImage:false });
@@ -36,21 +36,21 @@ module.exports = io => {
       //GAME
       .catch(e=>{
         if(m.mensaje.split(' ')[0]=='ris'){
-          Word(m.mensaje.toLowerCase())
+          Word(m.mensaje.toLowerCase().trim())
               .then(result => {
               console.log(result);
               socket.emit("chat", { status: "Mensaje recibido", mensaje: result.replace('***',m.mensaje),isImage:false });
           })
         }
         if(m.mensaje=='play'){
-            Word(m.mensaje.toLowerCase())
+            Word(m.mensaje.toLowerCase().trim())
               .then(result => {
               console.log(result);
               socket.emit("chat", { status: "Mensaje recibido", mensaje: result.replace('***',m.mensaje),isImage:true });
           })
         }
         else{
-        Word(m.mensaje.toLowerCase())
+        Word(m.mensaje.toLowerCase().trim())
         .then(result => {
          console.log(result);
          socket.emit("chat", { status: "Mensaje recibido", mensaje: result.replace('***',m.mensaje),isImage:false });

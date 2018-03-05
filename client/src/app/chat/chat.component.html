@@ -1,17 +1,25 @@
-<div class="chat">
-  <div class="conversations" #scrollMe style="overflow: scroll; height: xyz;">
-    <div class="mensaje" *ngFor="let m of chat.mensajes">
-      <div [ngClass]="m.type">
+<div class="container">
+  <div class="chat">
+    <div class="conversations" #scrollMe style="overflow: scroll; height: xyz;">
+      <div class="mensaje" *ngFor="let m of chat.mensajes">
+        <div [ngClass]="m.type">
+          <div class="right" *ngIf="m.type=='me'">
+              <img class="user" *ngIf="!session.getUserGender()" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtjC1ue_JBgcpqkfusdsWaehhnHrjx5nZMG76rEZj4hoAm_gMD"
+              alt="Card image cap" height="50" width="50">
+              <img class="user" *ngIf="session.getUserGender()" src="http://semantic-ui.com/images/avatar2/large/kristy.png" alt="Card image cap" height="50" width="50">  
+          </div>
+          <img class="user" *ngIf="m.type=='other'" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-aQu6StLE_WqB-2Rm3ukYIUZNSHre85ddEQANLv0hB79L8Ra8"
+            alt="" height="50" width="50">
           <div class="text">
             <p *ngIf="!m.isImage">{{m.mensaje}}</p>
-            <img *ngIf="m.isImage" src="{{m.mensaje}}" alt="game" height="150" width="150"> 
+            <img *ngIf="m.isImage" src="{{m.mensaje}}" alt="game" height="150" width="150">
           </div>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="sender">
-    <input class="form-control" type="text" [(ngModel)]="toSend" />
-    <button class="btn btn-secondary" (click)="sendMessage()">Enviar</button>
+    <div class="sender">
+      <input class="form-control" type="text" [(ngModel)]="toSend" />
+      <button class="btn btn-secondary" (click)="sendMessage()">Enviar</button>
+    </div>
   </div>
 </div>
-
