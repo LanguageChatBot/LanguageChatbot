@@ -16,6 +16,19 @@ export class UserListComponent implements OnInit {
   ngOnInit() {
   }
 
+  getAge(dateString) {
+    var today = new Date();
+    //console.log(today);
+    var birthDate = new Date(dateString);
+    //console.log(birthDate);
+    var age = today.getFullYear() - birthDate.getFullYear();
+    var m = today.getMonth() - birthDate.getMonth();
+    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+        age--;
+    }
+    return age;
+}
+
   
 
 }
