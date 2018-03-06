@@ -11,14 +11,14 @@
           <img class="user" *ngIf="m.type=='other'" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-aQu6StLE_WqB-2Rm3ukYIUZNSHre85ddEQANLv0hB79L8Ra8"
             alt="" height="50" width="50">
           <div class="text">
-            <p *ngIf="!m.isImage">{{m.mensaje}}</p>
+            <pre *ngIf="!m.isImage">{{m.mensaje}}</pre>
             <img *ngIf="m.isImage" src="{{m.mensaje}}" alt="game" height="150" width="150">
           </div>
         </div>
       </div>
     </div>
     <div class="sender">
-      <input class="form-control" type="text" [(ngModel)]="toSend" />
+      <input class="form-control" type="text" [(ngModel)]="toSend"  />
       <button class="btn btn-secondary" (click)="sendMessage()">Enviar</button>
     </div>
   </div>
