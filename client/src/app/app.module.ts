@@ -19,7 +19,6 @@ import { UserListComponent } from './user-list/user-list.component';
 import { userService } from '../services/user.service';
 
 
-
 @NgModule({
   declarations: [
     AppComponent,

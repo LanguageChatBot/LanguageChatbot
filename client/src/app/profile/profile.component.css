@@ -11,3 +11,9 @@
 .container{
     height: 100%;
 }
+
+
+.btn-primary{
+    background-color: #00B5AD;
+    border-color: #00B5AD;
+  }
