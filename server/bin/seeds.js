@@ -8,11 +8,11 @@ const tags = [
     {
         tag:['welcome'],
         question:[
-            {value:'how are you?, I\'m languinator I want help you to learn lenguages, if you want to train your vocabulary type play and I\'ll show you same picture and you have to guess the word',tag:'welcome'},
-            {value:'hi, how are you, I\'m languinator I want help you to learn lenguages, if you want to train your vocabulary type play and I\'ll show you same picture and you have to guess the word ?',tag:'welcome'},
-            {value:'hello, how are you, I\'m languinator I want help you to learn lenguages, if you want to train your vocabulary type play and I\'ll show you same picture and you have to guess the word ?',tag:'welcome'},
-            {value:'hey!!, how are you, I\'m languinator I want help you to learn lenguages, if you want to train your vocabulary type play and I\'ll show you same picture and you have to guess the word ?',tag:'welcome'},
-            {value:'wassup!, how are you, I\'m languinator I want help you to learn lenguages, if you want to train your vocabulary type play and I\'ll show you same picture and you have to guess the word ?',tag:'welcome'}
+            {value:'how are you?, I\'m languinator I want help you to learn lenguages, \nif you want to train your vocabulary type play and \nI\'ll show you same picture and you have to guess the word',tag:'welcome'},
+            {value:'hi, how are you, I\'m languinator I want help you to learn lenguages, \nif you want to train your vocabulary type play and \nI\'ll show you same picture and you have to guess the word ?',tag:'welcome'},
+            {value:'hello, how are you, I\'m languinator I want help you to learn lenguages, \nif you want to train your vocabulary type play and \nI\'ll show you same picture and you have to guess the word ?',tag:'welcome'},
+            {value:'hey!!, how are you, I\'m languinator I want help you to learn lenguages, \nif you want to train your vocabulary type play and \nI\'ll show you same picture and you have to guess the word ?',tag:'welcome'},
+            {value:'wassup!, how are you, I\'m languinator I want help you to learn lenguages, \nif you want to train your vocabulary type play and \nI\'ll show you same picture and you have to guess the word ?',tag:'welcome'}
         ],
         answer:[
             {value:'hi',tag:'welcome'},
@@ -57,14 +57,14 @@ const tags = [
         question:[{value:'why are you asking sorry?',tag:'apologize'}],
         answer:[
             {value:'sorry',tag:'apologize'},
-            {value:"i'm sorry",tag:'apologize'},
+            {value:"i'm sorry",tag:'apologize'}
         ]
     },
     {
         tag:['because'],
         question:[{value:'',tag:''}],
         answer:[{value:'',tag:''}],
-        reply:[{value:'',tag:''}],
+        reply:[{value:'',tag:''}]
     },
     {
         tag:['game'],
@@ -85,14 +85,14 @@ const tags = [
                   {value:'What are you going to buy?',tag:''}],
         answer:[
             {value:'supermarket',tag:'placesToBuy'},
-            {value:'mall',tag:'placesToBuy'},
+            {value:'mall',tag:'placesToBuy'}
         ]
     },{
         tag:['placesToEnjoy'],
         question:[{value:'Can I join to you?',tag:'positive'}],
         answer:[
             {value:'cinema',tag:'placesToEnjoy'},
-            {value:'home',tag:'placesToEnjoy'},
+            {value:'home',tag:'placesToEnjoy'}
         ]
     },{
         tag:['food'],
@@ -101,6 +101,31 @@ const tags = [
             {value:'bananas',tag:'food'},
             {value:'oranges',tag:'food'}
         ]
+    },{
+        tag:['emotion-joy-positive'],
+        question:[{value:'I am so glad for you',tag:'positive'}],
+        answer:[
+            {value:'joy-positive',tag:'emotion-joy-positive'}
+        ]
+
+    },{
+        tag:['emotion-neutral'],
+        question:[{value:'What can I say, I am a robot!!!!',tag:'neutral'}],
+        answer:[
+            {value:'sadness-neutral',tag:'emotion-neutral'},
+            {value:'joy-neutral',tag:'emotion-neutral'},
+            {value:'fear-neutral',tag:'emotion-neutral'},
+            {value:'disgust-neutral',tag:'emotion-neutral'},
+            {value:'anger-neutral',tag:'emotion-neutral'}
+        ]
+
+    },{
+        tag:['emotion-joy-negative'],
+        question:[{value:'That is cool! but relax time of coffe \n in Plaza Mayor',tag:'positive'}],
+        answer:[
+            {value:'joy-negative',tag:'emotion-joy-negative'}
+        ]
+
     }
 ]
 
