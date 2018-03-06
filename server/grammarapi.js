@@ -6,7 +6,6 @@ module.exports = sentence => {
     return new Promise((resolve,reject) => {
 
       sentence = sentence.replace(' ','+').charAt(0).toUpperCase() + sentence.slice(1);
-     
       url ="https://api.textgears.com/check.php?text="+sentence+"&key="+gramarPASS;
       axios
         .get(url)
