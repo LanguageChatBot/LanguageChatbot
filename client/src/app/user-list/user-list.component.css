@@ -9,3 +9,7 @@ td{
 .parent{
     width: 100%;
 }
+
+img{
+    border-radius: 100%;
+}
