@@ -6,6 +6,11 @@
     /*overflow-y: visible;*/
 
 }
+
+pre{
+    font-family: Helvetica, sans-serif;
+}
+
 .conversations{
     padding: 20px;
     height: 442px;
@@ -49,3 +54,7 @@ button{
 img{
     border-radius: 15px;
 }
+
+.container {
+    height: 100%;
+  }

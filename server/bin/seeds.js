@@ -70,7 +70,15 @@ const tags = [
         tag:['game'],
         question:[{value:'we play?',tag:'game'}],
         answer:[{value:'yes',tag:'game'}],
-        reply:[{value:'https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb',tag:'house'}]
+        reply:[
+        {value:'https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb',tag:'house'},
+        {value:'https://png.pngtree.com/element_pic/16/11/21/d74cad98c171360684fbd71ffb9d4dde.jpg',tag:'ball'},
+        {value:'https://png.pngtree.com/element_pic/17/03/08/e7e497522e9e7dd6ac0a21910eb34759.jpg',tag:'plate'},
+        {value:'https://vignette.wikia.nocookie.net/b__/images/3/35/Clock.png/revision/latest?cb=20130523115805&path-prefix=bloons',tag:'clock'},
+        {value:'http://www.freepngimg.com/download/sun/4-2-sun-png-picture.png',tag:'sun'},
+        {value:'https://cdn.shopify.com/s/files/1/1061/1924/products/Moon_emoji_icon_png_large.png?v=1480481021',tag:'moon'},
+        {value:'http://www.pngmart.com/files/3/Knife-PNG-Free-Download.png',tag:'knife'}
+    ]
     },{
         tag:['placesToBuy'],
         question:[{value:'Where do you usually go?',tag:'placesToBuy'},
