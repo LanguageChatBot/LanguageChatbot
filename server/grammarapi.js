@@ -31,28 +31,3 @@ module.exports = sentence => {
 
     })
 }
-
- /* {
-    result : true,  // false if error happens
-    errors : [  // array of errors info
-        0 : {
-            id : "e89bb171",  // unique error id
-            offset : 2,  // error text offset
-            length : 2,  // error text length
-            bad : "is",  // error text
-            better : [  // array of suggestions
-                0 : "am"
-            ]
-        },
-        1 : {
-            id : "e89bb172",  // unique error id
-            offset : 8,  // error text offset
-            length : 8,  // error text length
-            bad : "engeneer",  // error text
-            better : [  // array of suggestions
-                0 : "engineer",
-                1 : "engender"
-            ]
-        }
-    ]
-  }*/
