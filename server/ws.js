@@ -10,73 +10,99 @@ module.exports = io => {
     socket.on("chat-ready", m => {
       //console.log(m);
       console.log(m.mensaje);
-      Grammar(m.mensaje)
-       .then( res => {
-
-          if(res.error==true)
-          {
-            console.log(res);
-            socket.emit("chat", { status: "Mensaje recibido", mensaje:res.answer, isImage:false });
-
-          }else{
-            
-          }
-
-
-       })
-
-      /*MainWord(m.mensaje.toLowerCase())
-      .then(res =>{
-          if(res.length !=0){
-            Word(res[0].text)
-            .then(result => {
-             console.log(result);
-             socket.emit("chat", { status: "Mensaje recibido", mensaje: result.replace('***',res[0].text),isImage:false });
+      Grammar(m.mensaje).then(res => {
+        if (res.error == true) {
+          console.log(res);
+          socket.emit("chat", {
+            status: "Mensaje recibido",
+            mensaje: res.answer,
+            isImage: false
+          });
+        } else {
+          //console.log("no hay errores de gramática")
+          MainWord(m.mensaje.toLowerCase())
+            .then(res => {
+              if (res.length != 0) {
+                Word(res[0].text)
+                  .then(result => {
+                    console.log(result);
+                    socket.emit("chat", {
+                      status: "Mensaje recibido",
+                      mensaje: result.replace("***", res[0].text),
+                      isImage: false
+                    });
+                  })
+                  .catch(result => {
+                    console.log(result);
+                    socket.emit("chat", {
+                      status: "Mensaje recibido",
+                      mensaje: result,
+                      isImage: false
+                    });
+                  });
+              } else {
+                Word(m.mensaje.toLowerCase())
+                  .then(result => {
+                    console.log(result);
+                    socket.emit("chat", {
+                      status: "Mensaje recibido",
+                      mensaje: result.replace("***", m.mensaje),
+                      isImage: false
+                    });
+                  })
+                  .catch(result => {
+                    console.log(result);
+                    socket.emit("chat", {
+                      status: "Mensaje recibido",
+                      mensaje: result,
+                      isImage: false
+                    });
+                  });
+              }
             })
-            .catch(result => {
-             console.log(result);
-             socket.emit("chat", { status: "Mensaje recibido", mensaje: result,isImage:false });
-            })
-          }else{
-            Word(m.mensaje.toLowerCase())
-            .then(result => {
-             console.log(result);
-             socket.emit("chat", { status: "Mensaje recibido", mensaje: result.replace('***',m.mensaje),isImage:false });
-            })
-            .catch(result => {
-             console.log(result);
-             socket.emit("chat", { status: "Mensaje recibido", mensaje: result,isImage:false });
-            })
-          }
-      })*/
-      //GAME
-      .catch(e=>{
-        if(m.mensaje.split(' ')[0]=='ris'){
-          Word(m.mensaje.toLowerCase())
-              .then(result => {
-              console.log(result);
-              socket.emit("chat", { status: "Mensaje recibido", mensaje: result.replace('***',m.mensaje),isImage:false });
-          })
+            //GAME
+            .catch(e => {
+              if (m.mensaje.split(" ")[0] == "ris") {
+                Word(m.mensaje.toLowerCase()).then(result => {
+                  console.log(result);
+                  socket.emit("chat", {
+                    status: "Mensaje recibido",
+                    mensaje: result.replace("***", m.mensaje),
+                    isImage: false
+                  });
+                });
+              }
+              if (m.mensaje == "play") {
+                Word(m.mensaje.toLowerCase()).then(result => {
+                  console.log(result);
+                  socket.emit("chat", {
+                    status: "Mensaje recibido",
+                    mensaje: result.replace("***", m.mensaje),
+                    isImage: true
+                  });
+                });
+              } else {
+                Word(m.mensaje.toLowerCase())
+                  .then(result => {
+                    console.log(result);
+                    socket.emit("chat", {
+                      status: "Mensaje recibido",
+                      mensaje: result.replace("***", m.mensaje),
+                      isImage: false
+                    });
+                  })
+                  .catch(result => {
+                    console.log(result);
+                    socket.emit("chat", {
+                      status: "Mensaje recibido",
+                      mensaje: result,
+                      isImage: false
+                    });
+                  });
+              }
+            });
         }
-        if(m.mensaje=='play'){
-            Word(m.mensaje.toLowerCase())
-              .then(result => {
-              console.log(result);
-              socket.emit("chat", { status: "Mensaje recibido", mensaje: result.replace('***',m.mensaje),isImage:true });
-          })
-        }
-        else{
-        Word(m.mensaje.toLowerCase())
-        .then(result => {
-         console.log(result);
-         socket.emit("chat", { status: "Mensaje recibido", mensaje: result.replace('***',m.mensaje),isImage:false });
-        })
-        .catch(result => {
-         console.log(result);
-         socket.emit("chat", { status: "Mensaje recibido", mensaje: result,isImage:false });
-        })
-        }
-      })
+      });//grammar
     });
   });
 };

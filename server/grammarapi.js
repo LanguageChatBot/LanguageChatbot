@@ -5,20 +5,18 @@ module.exports = sentence => {
 
     return new Promise((resolve,reject) => {
 
-      sentence = sentence.replace(' ','+').charAt(0).toUpperCase() + sentence.slice(1);
-      url ="https://api.textgears.com/check.php?text="+sentence+"&key="+gramarPASS;
+      sentence = sentence.charAt(0).toUpperCase() + sentence.slice(1);
+      url ="https://api.textgears.com/check.php?text="+sentence.replace(' ','+')+"&key="+gramarPASS;
       axios
         .get(url)
         .then(response => {
     
-            if(response.data.result===true && response.data.errors.length > 0){
-            console.log("entramos en la fun");
             console.log(response.data);
-            console.log(response.data.result);    
+            if(response.data.result==true && response.data.errors.length > 0){
             aux=[];
             answer="";
-            response.data.errors.forEach((e => aux.push(e.better.join()+" instead "+ e.bad + '\n' ))); 
-            answer = "You have some mistakes in your grammar! check it: \n"+ aux.join();
+            response.data.errors.forEach((e => aux.push(e.better.join()+" instead "+ e.bad + "\n"))); 
+            answer = "You have some mistakes in your grammar! check it: \n"+aux.join();
             console.log(answer);  
             resolve({error:true,answer:answer})
             }
