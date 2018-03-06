@@ -5,7 +5,7 @@ module.exports = word => {
   return new Promise((resolve, reject) => {
     if(word.split(' ')[0] == 'ris'){
       Frases.findOne({ tag: 'game' }).then(function(res) {
-        if(res.reply[index].tag==word.split(' ')[1]){resolve('si');index++;if(index>res.reply.length){index=0}}
+        if(res.reply[index].tag==word.split(' ')[1]){resolve('si');index++;if(index>=res.reply.length){index=0}}
         else{resolve('no')}
       });
     }

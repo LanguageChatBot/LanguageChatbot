@@ -1,10 +1,6 @@
 .chat{
     padding: 20px;
     margin: 0 auto;
-    /*overflow-y: scroll;*/
-    /*overflow-y: overlay;*/
-    /*overflow-y: visible;*/
-
 }
 
 pre{
@@ -13,7 +9,7 @@ pre{
 
 .conversations{
     padding: 20px;
-    height: 442px;
+    height: 600px;
     overflow-y: scroll;
     overflow-x: hidden;
 }
@@ -58,3 +54,11 @@ img{
 .container {
     height: 100%;
   }
+
+.right{
+    float:right;
+}
+
+.user{
+    border-radius: 100%;
+}

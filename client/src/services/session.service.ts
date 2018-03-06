@@ -40,13 +40,6 @@ export class SessionService {
     }
   }
 
-  edit(username:string, language:string,gender:string,age:string):Observable<any>{
-    console.log(username,language,gender,age)
-    return this.http.put(`${this.BASEURL}/api/auth/edit`, {username,language,gender,age},this.options)
-      .map(res => res.json())
-      .catch(this.handleError);
-  }
-
   getUserGender(){
     return this.user.gender=='F'?true:false;
   }

@@ -13,6 +13,7 @@ export class ChatComponent implements OnInit, AfterViewChecked {
   @ViewChild('scrollMe') private myScrollContainer: ElementRef;
 
   toSend: string;
+  user:object;
 
   constructor(
     public chat: ChatService,
@@ -24,6 +25,7 @@ export class ChatComponent implements OnInit, AfterViewChecked {
     if (this.session.user == undefined) {
       this.router.navigate(["/login"]);
     }
+    this.user = this.session.user;
     this.scrollToBottom();
   }
 
