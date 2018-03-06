@@ -23,11 +23,4 @@ export class EditComponent implements OnInit {
     this.user = this.session.user;
     console.log(this.user)
   }
-
-  edit(){
-    this.session.edit(this.username, this.language,this.gender,this.age)
-    .catch(e => this.error = e)
-    .subscribe(result => {if(result === 200)this.router.navigate(['/profile'])});
-  }
-
 }

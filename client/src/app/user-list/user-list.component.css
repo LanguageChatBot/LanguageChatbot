@@ -1,0 +1,11 @@
+.container{
+    height: 100%;
+}
+
+td{
+    padding:20px;
+}
+
+.parent{
+    width: 100%;
+}

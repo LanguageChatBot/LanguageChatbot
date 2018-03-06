@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row">
+        <div class="parent">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Picture</th>
+                        <th scope="col">Username</th>
+                        <th scope="col">Gender</th>
+                        <th scope="col">Age</th>
+                        <th scope="col">Total Points</th>
+                    </tr>
+                </thead>
+                <tbody *ngFor="let user of userList">
+                    <tr>
+                        <th scope="row">{{userList.length}}</th>
+                        <td>
+                            <img *ngIf="user.gender=='M'" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtjC1ue_JBgcpqkfusdsWaehhnHrjx5nZMG76rEZj4hoAm_gMD"
+                                alt="Card image cap" height="50px" width="50px">
+                            <img *ngIf="user.gender=='F'" src="http://semantic-ui.com/images/avatar2/large/kristy.png" alt="Card image cap" height="50px" width="50px">
+                        </td>
+                        <td>{{user.username }} </td>
+                        <td>{{user.gender}}</td>
+                        <td>{{user.age}}</td>
+                        <td>{{user.progress}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -4,7 +4,7 @@
     <!--a sm-item *ngFor="let item of items" [icon]="">{{item.title}}</a-->
     <a sm-item [routerLink]="['/home']" [icon]="">Home</a>
     <a sm-item [routerLink]="['/chat']" [icon]="">Chat</a>
-    <a sm-item [routerLink]="['/test']" [icon]="">Vocabulary</a>
+    <a sm-item [routerLink]="['/list']" [icon]="">Rank</a>
     <sm-menu *ngIf="!session.getUser()" class="menu right secondary">
         <a sm-item [routerLink]="['/login']" [icon]="">Login</a>
         <a sm-item [routerLink]="['/singout']" [icon]="">SignUp</a>

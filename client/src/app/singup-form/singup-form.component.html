@@ -30,7 +30,6 @@
             <input class="form-control" type="date" [(ngModel)]="age" name="age" style="margin-bottom:17px">
             <p *ngIf="error" class="alert alert-danger"> {{ error }} </p>
             <div *ngIf="session.getUser()">
-              <pre> {{ session.getUser() | json }} </pre>
               <button (click)="logout()"> Logout </button>
             </div>
             <div>

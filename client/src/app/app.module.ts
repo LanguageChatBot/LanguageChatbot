@@ -14,8 +14,9 @@ import { NgSemanticModule } from 'ng-semantic';
 import { SingupFormComponent } from './singup-form/singup-form.component';
 import { AnimationComponent } from './animation/animation.component';
 import { ProfileComponent } from './profile/profile.component';
-import { TestComponent } from './test/test.component';
 import { EditComponent } from './edit/edit.component';
+import { UserListComponent } from './user-list/user-list.component';
+import { userService } from '../services/user.service';
 
 
 
@@ -28,8 +29,8 @@ import { EditComponent } from './edit/edit.component';
     SingupFormComponent,
     AnimationComponent,
     ProfileComponent,
-    TestComponent,
-    EditComponent
+    EditComponent,
+    UserListComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +39,7 @@ import { EditComponent } from './edit/edit.component';
     RouterModule.forRoot(routes),
     NgSemanticModule
   ],
-  providers: [ChatService,SessionService],
+  providers: [ChatService,SessionService,userService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -10,6 +10,7 @@ const mongoose = require('mongoose');
 const {dbURL} = require('./config');
 const cors = require('cors');
 const auth = require('./routes/auth');
+const generateCrud = require('./routes/crud');
 
 
 const index = require('./routes/index');
@@ -53,9 +54,11 @@ app.use(session({
 }));
 
 require('./passport')(app)
+const User = require('./models/User')
 
 app.use('/', index);
 app.use('/api/auth', auth);
+app.use('/api/user/', generateCrud(User));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
