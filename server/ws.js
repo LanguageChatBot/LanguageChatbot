@@ -54,7 +54,6 @@ module.exports = io => {
                     });
                 }
               })
-              //GAME
               .catch(e => {
       
                 Word(m.mensaje.toLowerCase())
