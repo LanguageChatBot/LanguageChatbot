@@ -14,6 +14,7 @@ let loginPromise = (req, user) => {
 /* SIGNUP */
 router.post('/signup', (req, res, next) => {
   const {username,password,languages = req.body.language, gender,age} = req.body;
+  const progress = 0;
   if (!username || !password || !languages) return res.status(400).json({ message: 'Provide username, password and a language' })
   User.findOne({ username }, '_id')
     .then(foundUser =>{
@@ -24,6 +25,7 @@ router.post('/signup', (req, res, next) => {
         username,
         password: hashPass,
         languages:[languages],
+        progress,
         gender,
         age
       });

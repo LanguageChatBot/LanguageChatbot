@@ -11,3 +11,7 @@
 .container{
     height: 100%;
 }
+
+img{
+    border-radius: 100%;
+}
