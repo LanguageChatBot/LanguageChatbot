@@ -34,6 +34,6 @@ module.exports = word => {
         resolve(result);
        });
       })
-     .catch( e => reject("Could you repeit again"))//No Tag found
+     .catch( e => reject("Could you repeit again?"))//No Tag found
   });
 };

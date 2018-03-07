@@ -17,8 +17,8 @@ export class userService {
       .map((res) => res.json());
   }
   
-  edit(user) {
-    return this.http.put(`${this.BASE_URL}/api/user/${user.id}`, user)
+  edit(id,form){
+    return this.http.put(`${this.BASE_URL}/api/user/${id}`, form)
       .map((res) => res.json());
   }
 }

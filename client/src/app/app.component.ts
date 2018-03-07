@@ -13,13 +13,6 @@ export class AppComponent {
   title = 'Languinator';
   error:string;
 
-  /*items: Array<Object> = [
-    {title:'Home', icon:'', url:"['/home']" },
-    {title:'Chat', icon:'', url:'/chat' },
-    {title:'Test', icon:'', url:'/test' }
-
-  ];*/
-
   constructor(public session:SessionService, private router:Router) { 
   }
 

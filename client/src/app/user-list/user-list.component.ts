@@ -10,7 +10,7 @@ export class UserListComponent implements OnInit {
 
   userList:Array<any>;
   constructor(public uS:userService) { 
-    this.uS.getList().subscribe(list => this.userList = list);
+    this.uS.getList().subscribe(list => {this.userList = list.sort((a,b) => {return (a.progress > b.progress) ? -1 : ((b.progress > a.progress) ? 1 : 0);})});
   }
 
   ngOnInit() {

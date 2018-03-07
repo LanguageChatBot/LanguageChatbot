@@ -1,6 +1,7 @@
 const express = require('express');
 const debug = require('debug')('server:crud');
 const _ = require('lodash');
+const User = require('../models/User');
 
 const generateCRUD = (Model) => {
 
@@ -47,11 +48,11 @@ const generateCRUD = (Model) => {
     // Get only the properties we need
     const model_properties = _.remove(
       Object.keys(Model.schema.paths),
-      k => !['_id', '__v', 'created_at', 'updated_at'].includes(k)
+      k => !['_id', '_v', 'created_at', 'updated_at'].includes(k)
     );
     const updates = _.pick(req.body, model_properties);
-
-    Model.findByIdAndUpdate(req.params.id, updates)
+    console.log(req.params.id, updates)
+    User.findByIdAndUpdate(req.params.id, updates)
       .then(newObj => {
         debug(`UPDATED: ${newObj._id}`)
         res.json({ message: 'Model updated successfully' })

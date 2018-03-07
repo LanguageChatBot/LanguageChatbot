@@ -9,10 +9,10 @@ const tags = [
         tag:['welcome'],
         question:[
             {value:'how are you?, I\'m languinator I want help you to learn lenguages, \nif you want to train your vocabulary type play and \nI\'ll show you same picture and you have to guess the word',tag:'welcome'},
-            {value:'hi, how are you, I\'m languinator I want help you to learn lenguages, \nif you want to train your vocabulary type play and \nI\'ll show you same picture and you have to guess the word ?',tag:'welcome'},
-            {value:'hello, how are you, I\'m languinator I want help you to learn lenguages, \nif you want to train your vocabulary type play and \nI\'ll show you same picture and you have to guess the word ?',tag:'welcome'},
-            {value:'hey!!, how are you, I\'m languinator I want help you to learn lenguages, \nif you want to train your vocabulary type play and \nI\'ll show you same picture and you have to guess the word ?',tag:'welcome'},
-            {value:'wassup!, how are you, I\'m languinator I want help you to learn lenguages, \nif you want to train your vocabulary type play and \nI\'ll show you same picture and you have to guess the word ?',tag:'welcome'}
+            {value:'hi, how are you?, I\'m languinator I want help you to learn lenguages, \nif you want to train your vocabulary type play and \nI\'ll show you same picture and you have to guess the word ?',tag:'welcome'},
+            {value:'hello, how are you?, I\'m languinator I want help you to learn lenguages, \nif you want to train your vocabulary type play and \nI\'ll show you same picture and you have to guess the word ?',tag:'welcome'},
+            {value:'hey!!, how are you?, I\'m languinator I want help you to learn lenguages, \nif you want to train your vocabulary type play and \nI\'ll show you same picture and you have to guess the word ?',tag:'welcome'},
+            {value:'What\'s up?, how are you?, I\'m languinator I want help you to learn lenguages, \nif you want to train your vocabulary type play and \nI\'ll show you same picture and you have to guess the word ?',tag:'welcome'}
         ],
         answer:[
             {value:'hi',tag:'welcome'},
@@ -46,6 +46,14 @@ const tags = [
         tag:[ 'positive'],
         question:[{value:'alsome!!, Why?',tag:'feeling'}],
         answer:[
+            {value:'I am amazing',tag:'positive'},
+            {value:'I\'m amazing',tag:'positive'},
+            {value:'I am great',tag:'positive'},
+            {value:'I\'m great',tag:'positive'},
+            {value:'I am good',tag:'positive'},
+            {value:'I\'m good',tag:'positive'},
+            {value:'I am fine',tag:'positive'},
+            {value:'I\'m fine',tag:'positive'},
             {value:'good',tag:'positive'},
             {value:'great',tag:'positive'},
             {value:'amazing',tag:'positive'},
@@ -62,9 +70,29 @@ const tags = [
     },
     {
         tag:['because'],
-        question:[{value:'',tag:''}],
-        answer:[{value:'',tag:''}],
+        question:[{value:'I will see!!',tag:'deduction'}],
+        answer:[
+            {value:'because',tag:'because'},
+            {value:'because I feel good',tag:'because'},
+            {value:'because I am',tag:'because'},
+            {value:'because yes',tag:'because'},
+            {value:'because no',tag:'because'},
+            {value:'because is the way I am',tag:'because'},
+            {value:'because is the way I feel',tag:'because'},
+            {value:'because I feel bad',tag:'because'}
+        ],
         reply:[{value:'',tag:''}]
+    },
+    {
+        tag:['questionToRobot'],
+        question:[{value:'Everythin Ok! you?',tag:''}],
+        answer:[
+            {value:'how are you',tag:'questionToRobot'},
+            {value:'how are you?',tag:'questionToRobot'},
+            {value:'how is going?',tag:'questionToRobot'},
+            {value:'how was your day?',tag:'questionToRobot'},
+            {value:'what\'s up?',tag:'questionToRobot'},
+            {value:'what you doing?',tag:'questionToRobot'}]
     },
     {
         tag:['game'],
@@ -95,17 +123,87 @@ const tags = [
             {value:'home',tag:'placesToEnjoy'}
         ]
     },{
-        tag:['food'],
+        tag:['fruit'],
         question:[{value:'I love ***',tag:'positive'}],
         answer:[
-            {value:'bananas',tag:'food'},
-            {value:'oranges',tag:'food'}
+            {value:'bananas',tag:'fruit'},
+            {value:'oranges',tag:'fruit'}
+        ]
+    },{
+        tag:['food'],
+        question:[{value:'I like ***',tag:'positive'}],
+        answer:[
+            {value:'sushi',tag:'food'},
+            {value:'paella',tag:'food'}
         ]
     },{
         tag:['emotion-joy-positive'],
         question:[{value:'I am so glad for you',tag:'positive'}],
         answer:[
             {value:'joy-positive',tag:'emotion-joy-positive'}
+        ]
+
+    },{
+        tag:['emotion-joy-negative'],
+        question:[{value:'That is cool! but relax time of coffe \n in Plaza Mayor',tag:'positive'}],
+        answer:[
+            {value:'joy-negative',tag:'emotion-joy-negative'}
+        ]
+
+    },{
+        tag:['emotion-sadness-positive'],
+        question:[{value:'Good for you!',tag:'positive'}],
+        answer:[
+            {value:'sadness-positive',tag:'emotion-sadness-positive'}
+        ]
+
+    },{
+        tag:['emotion-sadness-negative'],
+        question:[{value:'I am so sorry! :(',tag:'negative'}],
+        answer:[
+            {value:'sadness-negative',tag:'emotion-sadness-negative'}
+        ]
+
+    },{
+        tag:['emotion-fear-positive'],
+        question:[{value:'Oh my god! owwwwww!',tag:'positive'}],
+        answer:[
+            {value:'fear-positive',tag:'emotion-fear-positive'}
+        ]
+
+    },{
+        tag:['emotion-fear-negative'],
+        question:[{value:'Everythis is going yo be ok!',tag:'positive'}],
+        answer:[
+            {value:'fear-negative',tag:'emotion-fear-negative'}
+        ]
+
+    },{
+        tag:['emotion-disgust-positive'],
+        question:[{value:'I am impressed!',tag:'positive'}],
+        answer:[
+            {value:'disgust-positive',tag:'emotion-disgust-positive'}
+        ]
+
+    },{
+        tag:['emotion-disgust-negative'],
+        question:[{value:'Grrrrgggggg!!',tag:'positive'}],
+        answer:[
+            {value:'disgust-negative',tag:'emotion-disgust-negative'}
+        ]
+
+    },{
+        tag:['emotion-anger-positive'],
+        question:[{value:'Relax time of coffe in Plaza Mayor ;)',tag:'positive'}],
+        answer:[
+            {value:'anger-positive',tag:'emotion-anger-positive'}
+        ]
+
+    },{
+        tag:['emotion-anger-negative'],
+        question:[{value:'I am so sorry! :(',tag:'positive'}],
+        answer:[
+            {value:'anger-negative',tag:'emotion-anger-negative'}
         ]
 
     },{
@@ -117,13 +215,6 @@ const tags = [
             {value:'fear-neutral',tag:'emotion-neutral'},
             {value:'disgust-neutral',tag:'emotion-neutral'},
             {value:'anger-neutral',tag:'emotion-neutral'}
-        ]
-
-    },{
-        tag:['emotion-joy-negative'],
-        question:[{value:'That is cool! but relax time of coffe \n in Plaza Mayor',tag:'positive'}],
-        answer:[
-            {value:'joy-negative',tag:'emotion-joy-negative'}
         ]
 
     }
