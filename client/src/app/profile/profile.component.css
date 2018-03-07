@@ -14,9 +14,16 @@
 
 img{
     border-radius: 100%;
+    height: 50px;
+    width: 50px;
 }
 
 .btn-primary{
     background-color: #00B5AD;
     border-color: #00B5AD;
   }
+
+.size{
+    height: 50px;
+    width: 50px;
+}

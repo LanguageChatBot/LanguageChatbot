@@ -1,12 +1,13 @@
 <div class="container">
     <div class="row">
-        <div class="parent">
+        <span class="parent">
             <table class="table">
                 <thead>
                     <tr>
                         <th scope="col">#</th>
                         <th scope="col">Picture</th>
                         <th scope="col">Username</th>
+                        <th scope="col">Nationality</th>
                         <th scope="col">Gender</th>
                         <th scope="col">Age</th>
                         <th scope="col">Total Points</th>
@@ -18,15 +19,28 @@
                         <td>
                             <img *ngIf="user.gender=='M'" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtjC1ue_JBgcpqkfusdsWaehhnHrjx5nZMG76rEZj4hoAm_gMD"
                                 alt="Card image cap" height="50px" width="50px">
-                            <img *ngIf="user.gender=='F'" src="http://semantic-ui.com/images/avatar2/large/kristy.png" alt="Card image cap" height="50px" width="50px">
+                            <img *ngIf="user.gender=='F'" src="http://semantic-ui.com/images/avatar2/large/kristy.png" alt="Card image cap" height="50px"
+                                width="50px">
                         </td>
                         <td>{{user.username }} </td>
-                        <td>{{user.gender}}</td>
+                        <td>
+                            <img *ngIf="user.languages[0]=='it'" src="https://cdn1.iconfinder.com/data/icons/major-world-flags-1/512/italy_flag_circle-512.png" height="50px" width="50px">
+                            <img *ngIf="user.languages[0]=='en'" src="http://moziru.com/images/united-kingdom-clipart-16.png" height="50px" width="50px">
+                            <img *ngIf="user.languages[0]=='es'" src="https://cdn1.iconfinder.com/data/icons/major-world-flags-1/512/spain_flag_circle-256.png" height="50px" width="50px">
+                            <img *ngIf="user.languages[0]=='fr'" src="http://www.pngall.com/wp-content/uploads/2016/06/France-Flag-PNG-Picture.png" height="50px" width="50px">
+                            <img *ngIf="user.languages[0]=='de'" src="https://cdn.countryflags.com/thumbs/germany/flag-3d-round-250.png" height="50px" width="50px">
+                        </td>
+                        <td>
+                            <img *ngIf="user.gender=='M'" src="https://vignette.wikia.nocookie.net/theamazingworldofgumball/images/b/b1/Male.png/revision/latest?cb=20130328191746"
+                                alt="Card image cap" height="25px" width="25px">
+                            <img *ngIf="user.gender=='F'" src="data:image/png;base64,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"
+                                alt="Card image cap" height="25px" width="25px">
+                        </td>
                         <td>{{getAge(user.age)}}</td>
                         <td>{{user.progress}}</td>
                     </tr>
                 </tbody>
             </table>
-        </div>
+        </span>
     </div>
 </div>
