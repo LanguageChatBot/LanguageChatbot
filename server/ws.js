@@ -19,7 +19,7 @@ module.exports = io => {
           socket.emit("chat", {status: "Mensaje recibido",mensaje: result.replace("***", m.mensaje),isImage: false});});
       }else{
 
-        if (m.mensaje == "play") {
+        if (m.mensaje == "play" || m.mensaje == "ironhack") {
           Word(m.mensaje.toLowerCase()).then(result => {
             console.log(result);
             socket.emit("chat", {status: "Mensaje recibido",mensaje: result.replace("***", m.mensaje),isImage: true});});
@@ -44,10 +44,23 @@ module.exports = io => {
                     })
                     //Respondemos por sentimiento y emoción
                     .catch(result => {
-                      console.log("Entramos y obtenemos sentimiento de watson")
+
+                      //promise all
+                      Promise.all(res.map( word =>  Word(word.emotion + '-' + word.sentiment) ) )
+                      .then(values => { 
+                          console.log(values);
+                          socket.emit("chat", {status: "Mensaje recibido",  mensaje: values[Math.floor(Math.random() * values.length)]   , isImage: false});
+                       })
+                      .catch(result => { 
+                        console.log(result)
+                        socket.emit("chat", {status: "Mensaje recibido",  mensaje: result, isImage: false});
+                      });
+
+                      /*console.log("Entramos y obtenemos sentimiento de watson")
                       console.log(res[0]);
                       console.log(res[0].emotion + '-' + res[0].sentiment);
-                      Word(res[0].emotion + '-' + res[0].sentiment)
+                      watsonKey = res.length > 1? res[0].sentiment == 'neutral' ? res[1] :res[0]: res[0];
+                      Word(watsonKey.emotion + '-' + watsonKey.sentiment)
                         .then(result => {
                           console.log("entramos en el then");
                           console.log(result);
@@ -57,15 +70,19 @@ module.exports = io => {
                           console.log("entramos en el catch");
                           console.log(result);
                           socket.emit("chat", {status: "Mensaje recibido",mensaje: result,isImage: false});
-                          });
+                          });*/
+
                     });
                 } else {
+                  console.log("entramos en el else de keywords = 0");
                   Word(m.mensaje.toLowerCase())
                     .then(result => {
+                      console.log("entramos en la prueba");
                       console.log(result);
                       socket.emit("chat", {status: "Mensaje recibido",mensaje: result.replace("***", m.mensaje),isImage: false});
                     })
                     .catch(result => {
+                      console.log("entramos en el catch de la prueba");
                       console.log(result);socket.emit("chat", {status: "Mensaje recibido",mensaje: result,isImage: false});
                     });
                 }
@@ -73,6 +90,8 @@ module.exports = io => {
 
               //Watson no puedo actuar porque la frase es muy corta
               .catch(e => {
+                console.log("Error watson dentro de ws.js");
+                console.log(e.error);
                 Word(m.mensaje.toLowerCase())
                 .then(result => {
                   console.log(result);
