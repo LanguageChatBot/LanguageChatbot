@@ -40,20 +40,21 @@ const tags = [
             {value:'bad',tag:'negative'},
             {value:'not so good',tag:'negative'},
             {value:'sad',tag:'negative'}
-        ]
+        ],
+        reply:[{value:'I don\'t know :/',tag:'negative'}]
     },
     {
         tag:[ 'positive'],
-        question:[{value:'alsome!!, Why?',tag:'feeling'}],
+        question:[{value:'awsome!!, Why?',tag:'feeling'}],
         answer:[
-            {value:'I am amazing',tag:'positive'},
-            {value:'I\'m amazing',tag:'positive'},
-            {value:'I am great',tag:'positive'},
-            {value:'I\'m great',tag:'positive'},
-            {value:'I am good',tag:'positive'},
-            {value:'I\'m good',tag:'positive'},
-            {value:'I am fine',tag:'positive'},
-            {value:'I\'m fine',tag:'positive'},
+            {value:'i am amazing',tag:'positive'},
+            {value:'i\'m amazing',tag:'positive'},
+            {value:'i am great',tag:'positive'},
+            {value:'i\'m great',tag:'positive'},
+            {value:'i am good',tag:'positive'},
+            {value:'i\'m good',tag:'positive'},
+            {value:'i am fine',tag:'positive'},
+            {value:'i\'m fine',tag:'positive'},
             {value:'good',tag:'positive'},
             {value:'great',tag:'positive'},
             {value:'amazing',tag:'positive'},
@@ -73,48 +74,41 @@ const tags = [
         question:[{value:'I will see!!',tag:'deduction'}],
         answer:[
             {value:'because',tag:'because'},
-            {value:'because I feel good',tag:'because'},
-            {value:'because I am',tag:'because'},
+            {value:'because i am good',tag:'because'},
+            {value:'because i feel good',tag:'because'},
+            {value:'because i am',tag:'because'},
             {value:'because yes',tag:'because'},
             {value:'because no',tag:'because'},
-            {value:'because is the way I am',tag:'because'},
-            {value:'because is the way I feel',tag:'because'},
-            {value:'because I feel bad',tag:'because'}
+            {value:'because is the way i am',tag:'because'},
+            {value:'because is the way i feel',tag:'because'},
+            {value:'because i feel bad',tag:'because'}
         ],
         reply:[{value:'',tag:''}]
     },
     {
-        tag:['qBotFeeling'],
-        question:[{value:'Everythin Ok! you?',tag:''}],
-        answer:[
-            {value:'how are you',tag:'qBotFeeling'},
-            {value:'how are you?',tag:'qBotFeeling'},
-            {value:'how is going?',tag:'qBotFeeling'},
-            {value:'how was your day?',tag:'qBotFeeling'},
-            {value:'what\'s up?',tag:'qBotFeeling'},
-            {value:'what you doing?',tag:'qBotFeeling'}]
+         tag:['qBotFeeling'],
+        question:[{value:'how are you?',tag:'qBotFeeling'},
+                  {value:'how is going?',tag:'qBotFeeling'},
+                  {value:'how was your day?',tag:'qBotFeeling'},
+                  {value:'what\'s up?',tag:'qBotFeeling'},
+                  {value:'what you doing?',tag:'qBotFeeling'}],
+        answer:[{value:'',tag:''}],
+        reply:[{value:'Everythin Ok! you?',tag:'qBotFeeling'}]
     },
     {
         tag:['qBotName'],
-        question:[{value:'Languinator :)',tag:'positive'}],
-        answer:[
-            {value:'What is your name?',tag:'qBotName'},
-            {value:'What is your name',tag:'qBotName'},
-            {value:'What\'s your name',tag:'qBotName'},
-            {value:'What\'s your name?',tag:'qBotName'},
-            {value:'your name',tag:'qBotName'},
-            {value:'your name?',tag:'qBotName'}
-        ]
+        question:[{value:'what is your name?',tag:'qBotName'},
+                  {value:'what\'s your name?',tag:'qBotName'},
+                  {value:'your name?',tag:'qBotName'}],
+        answer:[{value:'',tag:''}],
+        reply:[{value:'Languinator',tag:'positive'}]
     },
     {
         tag:['qBotHome'],
-        question:[{value:'In Matadero',tag:'positive'}],
-        answer:[
-            {value:'Where do you live?',tag:'qBotHome'},
-            {value:'Where you live?',tag:'qBotHome'},
-            {value:'Where do you live',tag:'qBotHome'},
-            {value:'Where you live',tag:'qBotHome'}
-        ]
+        question:[{value:'where do you live?',tag:'qBotHome'},
+                  {value:'where you live?',tag:'qBotHome'}],
+        answer:[{value:'',tag:''}],
+        reply:[{value:'In Matadero',tag:'qBotHome'}]
     },
     {
         tag:['game'],
@@ -129,21 +123,33 @@ const tags = [
         {value:'https://cdn.shopify.com/s/files/1/1061/1924/products/Moon_emoji_icon_png_large.png?v=1480481021',tag:'moon'},
         {value:'http://www.pngmart.com/files/3/Knife-PNG-Free-Download.png',tag:'knife'}
     ]
-    },{
+    },
+    {
+        tag:['ironhack'],
+        question:[{value:'we play?',tag:'ironhack'}],
+        answer:[{value:'yes',tag:'ironhack'}],
+        reply:[
+        {value:'https://media.licdn.com/media/AAEAAQAAAAAAAAzWAAAAJGY4YzVjNGI4LTcwOWQtNGYyYy05NDM4LWY0OWVhYTgyNWM3Zg.jpg',tag:'marc'}
+    ]
+    }
+    ,{
         tag:['placesToBuy'],
-        question:[{value:'Where do you usually go?',tag:'placesToBuy'},
-                  {value:'What are you going to buy?',tag:''}],
+        question:[{value:'where do you go?',tag:'placesToBuy'},
+                  {value:'what are you going to buy?',tag:''}],
         answer:[
             {value:'supermarket',tag:'placesToBuy'},
             {value:'mall',tag:'placesToBuy'}
-        ]
+        ],
+        reply:[{value:'To Matadero',tag:'placesToBuy'}]
     },{
         tag:['placesToEnjoy'],
-        question:[{value:'Can I join to you?',tag:'positive'}],
+        question:[{value:'can I join to you?',tag:'positive'}],
         answer:[
             {value:'cinema',tag:'placesToEnjoy'},
             {value:'home',tag:'placesToEnjoy'}
-        ]
+        ],
+        reply:[{value:'Of course',tag:'placesToEnjoy'}]
+        
     },{
         tag:['fruit'],
         question:[{value:'I love ***',tag:'positive'}],

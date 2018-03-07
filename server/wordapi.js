@@ -26,8 +26,8 @@ module.exports = sentence => {
 
         if (err){
           console.log("error watson");
-          console.log('error:', err);
-          reject()
+          //console.log('error:', err);
+          reject(err);
         }
         else{
           console.log(JSON.stringify(res, null, 2));
