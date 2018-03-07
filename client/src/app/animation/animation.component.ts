@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AnimationComponent implements OnInit {
 
-  words: Array<string> = ['Lerning is not impossible!!!', 'imparare non è impossibile!!!', 'Aprender no es imposible!!'];
+  words: Array<string> = ['Learning is not impossible!!!', 'imparare non è impossibile!!!', 'Aprender no es imposible!!'];
   word:string;
   char:string;
   idx:number=0;

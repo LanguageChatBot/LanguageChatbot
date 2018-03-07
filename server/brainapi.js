@@ -11,7 +11,7 @@ module.exports = (word,id) => {
           if (err) return handleError(err);
           // res.send(user);
         });
-      }
+      } 
         else{resolve('no')}
       });
     }
