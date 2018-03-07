@@ -3,7 +3,11 @@ h1 {
 	margin: 10px 0 0 0;
 	font-weight: lighter;
 	text-transform: uppercase;
-	color: #eeeeee;
+	color: black;
+	background-color: white ;
+	height: 35px;
+	border-radius: 5%;
+	border: black solid 1px;
 }
 
 p {
