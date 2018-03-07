@@ -1,7 +1,7 @@
 const Frases = require("./models/Brain");
 const User = require("./models/User");
 let index = 0;
-let i = 0;
+//let i = 0;
 
 module.exports = (word, id) => {
   return new Promise((resolve, reject) => {
@@ -16,8 +16,8 @@ module.exports = (word, id) => {
         });
       }
         else{
-          sentence= word.split(' ')[1]=='marc'?'Yaiza!!! you are soooo GOOOD':'Ooooh Try again :)';
-          resolve(sentence)}
+          //sentence= word.split(' ')[1]=='marc'?'Yaiza!!! you are soooo GOOOD':'Ooooh Try again :)';
+          resolve('Ooooh Try again :)')}
       })
     }
 
@@ -30,13 +30,13 @@ module.exports = (word, id) => {
     }
 
 
-    if(word == 'ironhack'){
+    /*if(word == 'ironhack'){
       Frases.findOne({ tag: 'ironhack' }).then(function(res) {
         let result =
           res.reply[i].value;
         resolve(result);
       });
-    }
+    }*/
 
     if(word.charAt(word.length-1)=='?'){
       //console.log("nos hacen una pregunta");
