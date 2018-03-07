@@ -84,15 +84,37 @@ const tags = [
         reply:[{value:'',tag:''}]
     },
     {
-        tag:['questionToRobot'],
+        tag:['qBotFeeling'],
         question:[{value:'Everythin Ok! you?',tag:''}],
         answer:[
-            {value:'how are you',tag:'questionToRobot'},
-            {value:'how are you?',tag:'questionToRobot'},
-            {value:'how is going?',tag:'questionToRobot'},
-            {value:'how was your day?',tag:'questionToRobot'},
-            {value:'what\'s up?',tag:'questionToRobot'},
-            {value:'what you doing?',tag:'questionToRobot'}]
+            {value:'how are you',tag:'qBotFeeling'},
+            {value:'how are you?',tag:'qBotFeeling'},
+            {value:'how is going?',tag:'qBotFeeling'},
+            {value:'how was your day?',tag:'qBotFeeling'},
+            {value:'what\'s up?',tag:'qBotFeeling'},
+            {value:'what you doing?',tag:'qBotFeeling'}]
+    },
+    {
+        tag:['qBotName'],
+        question:[{value:'Languinator :)',tag:'positive'}],
+        answer:[
+            {value:'What is your name?',tag:'qBotName'},
+            {value:'What is your name',tag:'qBotName'},
+            {value:'What\'s your name',tag:'qBotName'},
+            {value:'What\'s your name?',tag:'qBotName'},
+            {value:'your name',tag:'qBotName'},
+            {value:'your name?',tag:'qBotName'}
+        ]
+    },
+    {
+        tag:['qBotHome'],
+        question:[{value:'In Matadero',tag:'positive'}],
+        answer:[
+            {value:'Where do you live?',tag:'qBotHome'},
+            {value:'Where you live?',tag:'qBotHome'},
+            {value:'Where do you live',tag:'qBotHome'},
+            {value:'Where you live',tag:'qBotHome'}
+        ]
     },
     {
         tag:['game'],
@@ -173,7 +195,7 @@ const tags = [
 
     },{
         tag:['emotion-fear-negative'],
-        question:[{value:'Everythis is going yo be ok!',tag:'positive'}],
+        question:[{value:'Everything is going yo be ok!',tag:'positive'}],
         answer:[
             {value:'fear-negative',tag:'emotion-fear-negative'}
         ]
