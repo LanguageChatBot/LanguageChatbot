@@ -31,7 +31,7 @@ export class ChatComponent implements OnInit, AfterViewChecked {
 
   sendMessage() {
     //console.log(`Enviando mensaje: ${this.toSend}`);
-    this.chat.sendMessage(this.toSend);
+    this.chat.sendMessage(this.toSend,this.user);
     this.toSend = "";
   }
 
