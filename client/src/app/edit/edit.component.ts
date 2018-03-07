@@ -32,6 +32,6 @@ export class EditComponent implements OnInit {
     console.log(id)
     this.uS.edit(id, form.value)
     .catch(e => this.error = e)
-    .subscribe(status => { if(status === 200) this.router.navigate([`/login`]) } )
+    .subscribe(status => { if(status === 200) this.router.navigate([`/profile`]) } )
   }
 }

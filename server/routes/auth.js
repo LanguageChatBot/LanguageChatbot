@@ -3,7 +3,7 @@ const router = express.Router();
 const User = require('../models/User');
 const bcrypt = require('bcrypt');
 const debug = require('debug')("server:auth");
-const passport = require('passport')
+const passport = require('passport');
 
 let loginPromise = (req, user) => {
   return new Promise((resolve,reject) => {

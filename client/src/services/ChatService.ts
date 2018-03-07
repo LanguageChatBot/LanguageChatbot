@@ -6,6 +6,7 @@ interface Message {
   mensaje: string;
   type: string;
   isImage: boolean;
+  user:object;
 }
 
 @Injectable()
@@ -20,7 +21,8 @@ export class ChatService {
       this.mensajes.push({
         mensaje: m.mensaje,
         type: "other",
-        isImage: m.isImage
+        isImage: m.isImage,
+        user:null,
       });
       //console.log(this.mensajes)
       img = this.mensajes[this.mensajes.length - 1].isImage;
@@ -31,22 +33,25 @@ export class ChatService {
     });
   }
 
-  sendMessage(m: string) {
+  sendMessage(m: string, user:object) {
     if (img == true) {
       this.socket.emit("chat-ready", {
         status: "Mensaje recibido",
-        mensaje: "ris " + m
+        mensaje: "ris " + m,
+        user:user
       });
     } else {
       this.socket.emit("chat-ready", {
         status: "Mensaje recibido",
-        mensaje: m
+        mensaje: m,
+        user:user,
       });
     }
     this.mensajes.push({
       mensaje: m,
       type: "me",
-      isImage: false
+      isImage: false,
+      user:user,
     });
   }
 }

@@ -9,11 +9,12 @@ module.exports = io => {
     console.log("a user connected");
     socket.on("chat-ready", m => {
       //console.log(m);
-      console.log(m.mensaje);
+      //console.log(m.mensaje);
+      //console.log('lo user è '+ m.user._id)
 
       //GAME
       if (m.mensaje.split(" ")[0] == "ris") {
-        Word(m.mensaje.toLowerCase()).then(result => {
+        Word(m.mensaje.toLowerCase(),m.user._id).then(result => {
           console.log(result);
           socket.emit("chat", {status: "Mensaje recibido",mensaje: result.replace("***", m.mensaje),isImage: false});});
       }else{
@@ -82,22 +83,10 @@ module.exports = io => {
                   console.log(result);
                   socket.emit("chat", {status: "Mensaje recibido",mensaje: result,isImage: false});
                 });
-               
               });
-      
-  
-                  
             }}); 
-        
-        
         }
-  
-
-
       }
-     
-
-
     });
   });
 };
