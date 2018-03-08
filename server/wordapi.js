@@ -20,7 +20,7 @@ module.exports = sentence => {
                                limit: 2,//Determina el número de palabras que obtenemos de watson
                               },
                   },
-        };
+        }; 
       
       natural_language_understanding.analyze(parameters, function( err,res){
 

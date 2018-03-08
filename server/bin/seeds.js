@@ -8,11 +8,11 @@ const tags = [
     {
         tag:['welcome'],
         question:[
-            {value:'how are you?, I\'m languinator I want help you to learn lenguages, \nif you want to train your vocabulary type play and \nI\'ll show you same picture and you have to guess the word',tag:'welcome'},
-            {value:'hi, how are you?, I\'m languinator I want help you to learn lenguages, \nif you want to train your vocabulary type play and \nI\'ll show you same picture and you have to guess the word ?',tag:'welcome'},
-            {value:'hello, how are you?, I\'m languinator I want help you to learn lenguages, \nif you want to train your vocabulary type play and \nI\'ll show you same picture and you have to guess the word ?',tag:'welcome'},
-            {value:'hey!!, how are you?, I\'m languinator I want help you to learn lenguages, \nif you want to train your vocabulary type play and \nI\'ll show you same picture and you have to guess the word ?',tag:'welcome'},
-            {value:'What\'s up?, how are you?, I\'m languinator I want help you to learn lenguages, \nif you want to train your vocabulary type play and \nI\'ll show you same picture and you have to guess the word ?',tag:'welcome'}
+            {value:'how are you?,😊 I\'m languinator I want help you to learn lenguages, \nif you want to train your vocabulary type play and \nI\'ll show you same picture and you have to guess the word',tag:'welcome'},
+            {value:'hi, how are you?,😊 I\'m languinator I want help you to learn lenguages, \nif you want to train your vocabulary type play and \nI\'ll show you same picture and you have to guess the word ?',tag:'welcome'},
+            {value:'hello, how are you?,😊 I\'m languinator I want help you to learn lenguages, \nif you want to train your vocabulary type play and \nI\'ll show you same picture and you have to guess the word ?',tag:'welcome'},
+            {value:'hey!!, how are you?,😊 I\'m languinator I want help you to learn lenguages, \nif you want to train your vocabulary type play and \nI\'ll show you same picture and you have to guess the word ?',tag:'welcome'},
+            {value:'What\'s up?, how are you?,😊 I\'m languinator I want help you to learn lenguages, \nif you want to train your vocabulary type play and \nI\'ll show you same picture and you have to guess the word ?',tag:'welcome'}
         ],
         answer:[
             {value:'hi',tag:'welcome'},
@@ -26,11 +26,12 @@ const tags = [
     },
     {
         tag:['greetings'],
-        question:[{value:'Thanks but I\'m just a bot',tag:'greetings'}],
+        question:[{value:'I know I am languinator 😎',tag:'greetings'}],
         answer:[
             {value:'you are amazing',tag:'greetings'},
             {value:'you are incredible',tag:'greetings'},
-            {value:"i love you",tag:'positive'}
+            {value:"i love you",tag:'greetings'},
+            {value:"amazing", tag:'greetings'}
         ]
     },
     {

@@ -4,10 +4,8 @@ h1 {
 	font-weight: lighter;
 	text-transform: uppercase;
 	color: black;
-	background-color: white ;
 	height: 35px;
 	border-radius: 5%;
-	border: black solid 1px;
 }
 
 p {

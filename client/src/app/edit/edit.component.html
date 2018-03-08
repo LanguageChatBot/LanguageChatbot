@@ -2,9 +2,11 @@
   <div class="row text-center" style="margin-top:17px">
     <div class="card center" style="width: 28rem;">
       <img *ngIf="!session.getUserGender()" class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtjC1ue_JBgcpqkfusdsWaehhnHrjx5nZMG76rEZj4hoAm_gMD"
-        alt="Card image cap">
-      <img *ngIf="session.getUserGender()" class="card-img-top" src="http://semantic-ui.com/images/avatar2/large/kristy.png" alt="Card image cap">
-      <div class="card-body" ng-controller="myController">
+        alt="Card image cap" width="50px" height="200px">
+      <img *ngIf="session.getUserGender()" class="card-img-top" src="http://semantic-ui.com/images/avatar2/large/kristy.png" alt="Card image cap"
+      width="50px" height="200px"
+      >
+      <div class="card-body" ng-controller="myController" >
         <h5 class="card-title">Profile</h5>
         <form (ngSubmit)="submitForm(user._id, edituser)" #edituser="ngForm">
           <label> Username </label>
