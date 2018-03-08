@@ -8,7 +8,7 @@ module.exports = (word, id) => {
     if (word.split(" ")[0] == "ris") {
       Frases.findOne({ tag: "game" }).then(function(res) {
         if (res.reply[index].tag == word.split(" ")[1]) {
-          resolve('Yes! you get it! Write play if you want to continue!');
+          resolve('Yes!🔝 you get it! Write play for keep gaming! 😉');
           index++;
           if (index >= res.reply.length) {
             index = 0;
@@ -23,7 +23,7 @@ module.exports = (word, id) => {
             }
           );
         } else {
-          resolve('Ooooh Try again :), type play to retry');
+          resolve('Ooooh Try again 😁, type play to retry');
         }
       });
     }

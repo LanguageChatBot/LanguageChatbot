@@ -8,6 +8,7 @@ import { userService } from "../../services/user.service";
 })
 export class UserListComponent implements OnInit {
   userList: Array<any>;
+  checkSameValue:number;
   constructor(public uS: userService) {
     this.uS.getList().subscribe(list => {
       this.userList = list.sort((a, b) => {
@@ -29,5 +30,11 @@ export class UserListComponent implements OnInit {
       age--;
     }
     return age;
+  }
+  displayCondition(checkValue, elementValue) {
+    console.log(checkValue, elementValue)
+    if(checkValue > elementValue) {
+      return true;
+    }
   }
 }
