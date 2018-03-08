@@ -46,7 +46,7 @@ module.exports = io => {
                     .catch(result => {
 
                       //promise all
-                      Promise.all(res.map( word =>  Word(word.emotion + '-' + word.sentiment) ) )
+                      /*Promise.all(res.map( word =>  Word(word.emotion + '-' + word.sentiment) ) )
                       .then(values => { 
                           console.log(values);
                           socket.emit("chat", {status: "Mensaje recibido",  mensaje: values[Math.floor(Math.random() * values.length)]   , isImage: false});
@@ -54,9 +54,9 @@ module.exports = io => {
                       .catch(result => { 
                         console.log(result)
                         socket.emit("chat", {status: "Mensaje recibido",  mensaje: result, isImage: false});
-                      });
+                      });*/
 
-                      /*console.log("Entramos y obtenemos sentimiento de watson")
+                      console.log("Entramos y obtenemos sentimiento de watson")
                       console.log(res[0]);
                       console.log(res[0].emotion + '-' + res[0].sentiment);
                       watsonKey = res.length > 1? res[0].sentiment == 'neutral' ? res[1] :res[0]: res[0];
@@ -70,7 +70,7 @@ module.exports = io => {
                           console.log("entramos en el catch");
                           console.log(result);
                           socket.emit("chat", {status: "Mensaje recibido",mensaje: result,isImage: false});
-                          });*/
+                          });
 
                     });
                 } else {
