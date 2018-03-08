@@ -30,12 +30,10 @@ module.exports = (word, id) => {
 
     if (word.split(" ")[0] == "ris" && word.split(" ")[1]== "marc") {
       Frases.findOne({ tag: "ironhack" }).then(function(res) {
-        if (res.reply[index].tag == word.split(" ")[1]) {
+        if (res.reply[0].tag == word.split(" ")[1]) {
           resolve('Yaiza!! you are soooo GOOOOD TODAY! 😉');
-          index++;
-          if (index >= res.reply.length) {
-            index = 0;
-          }
+          i = 0;
+          
           User.findByIdAndUpdate(
             id,
             { $inc: { progress: 10 } },

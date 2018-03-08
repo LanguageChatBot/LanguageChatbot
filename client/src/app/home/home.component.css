@@ -1,10 +1,16 @@
 h4{
 	font-size: 28px;
 	line-height: 50px;
+	color: rgb(83, 82, 82);
 }
 
 h5{
 	font-size: 18px;
+	color: rgb(83, 82, 82);
+}
+
+a{
+	color: rgba(142, 68, 173, 1)
 }
 
 .section {
