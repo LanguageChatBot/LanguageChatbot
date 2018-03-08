@@ -46,7 +46,7 @@ const tags = [
     },
     {
         tag:[ 'positive'],
-        question:[{value:'awsome!!, Why?',tag:'feeling'}],
+        question:[{value:'Awsome!!, Why?',tag:'feeling'}],
         answer:[
             {value:'i am amazing',tag:'positive'},
             {value:'i\'m amazing',tag:'positive'},
@@ -59,7 +59,8 @@ const tags = [
             {value:'good',tag:'positive'},
             {value:'great',tag:'positive'},
             {value:'amazing',tag:'positive'},
-            {value:'fine',tag:'positive'}
+            {value:'fine',tag:'positive'},
+            {value:'I had a really good day',tag:'emotion-joy-positive'}
         ]
     },
     {
@@ -102,7 +103,7 @@ const tags = [
                   {value:'what\'s your name?',tag:'qBotName'},
                   {value:'your name?',tag:'qBotName'}],
         answer:[{value:'',tag:''}],
-        reply:[{value:'Languinator',tag:'positive'}]
+        reply:[{value:'Languinator 🤖',tag:'positive'}]
     },
     {
         tag:['qBotHome'],
@@ -169,12 +170,12 @@ const tags = [
         tag:['emotion-joy-positive'],
         question:[{value:'I am so glad for you',tag:'positive'}],
         answer:[
-            {value:'joy-positive',tag:'emotion-joy-positive'}
+            {value:'joy-positive',tag:'emotion-joy-positive'},
         ]
 
     },{
         tag:['emotion-joy-negative'],
-        question:[{value:'That is cool! but relax time of coffe \n in Plaza Mayor',tag:'positive'}],
+        question:[{value:'That is cool! but now go to relax with a coffe \n in Plaza Mayor',tag:'positive'}],
         answer:[
             {value:'joy-negative',tag:'emotion-joy-negative'}
         ]
