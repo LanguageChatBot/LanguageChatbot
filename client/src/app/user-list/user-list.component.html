@@ -14,7 +14,7 @@
                     </tr>
                 </thead>
                 <tbody *ngFor="let user of userList; let i = index">
-                    <tr *ngIf="displayCondition(10, i)">
+                    <tr *ngIf="displayCondition(5, i)">
                         <th scope="row">{{i+1}}</th>
                         <td>
                             <img *ngIf="user.gender=='M'" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtjC1ue_JBgcpqkfusdsWaehhnHrjx5nZMG76rEZj4hoAm_gMD"
