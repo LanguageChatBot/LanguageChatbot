@@ -3,9 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon ./bin/www"
+    "start": "node ./bin/www"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "bcrypt": "^1.0.3",
     "body-parser": "~1.17.1",
     "connect-mongo": "^2.0.1",
@@ -16,12 +17,16 @@
     "ejs": "~2.5.6",
     "express": "~4.15.2",
     "express-session": "^1.15.6",
+    "lodash": "^4.17.5",
+    "lodash.invert": "^4.3.0",
     "mongoose": "^5.0.7",
     "morgan": "~1.8.1",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
+    "request": "^2.83.0",
     "serve-favicon": "~2.4.2",
-    "socket.io": "^2.0.4"
+    "socket.io": "^2.0.4",
+    "watson-developer-cloud": "^3.0.7"
   },
   "devDependencies": {
     "nodemon": "^1.15.1"

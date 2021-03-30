@@ -12,6 +12,12 @@ import { RouterModule } from '@angular/router';
 import { routes } from './routes';
 import { NgSemanticModule } from 'ng-semantic';
 import { SingupFormComponent } from './singup-form/singup-form.component';
+import { AnimationComponent } from './animation/animation.component';
+import { ProfileComponent } from './profile/profile.component';
+import { EditComponent } from './edit/edit.component';
+import { UserListComponent } from './user-list/user-list.component';
+import { userService } from '../services/user.service';
+
 
 @NgModule({
   declarations: [
@@ -19,7 +25,11 @@ import { SingupFormComponent } from './singup-form/singup-form.component';
     ChatComponent,
     LoginFormComponent,
     HomeComponent,
-    SingupFormComponent
+    SingupFormComponent,
+    AnimationComponent,
+    ProfileComponent,
+    EditComponent,
+    UserListComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +38,7 @@ import { SingupFormComponent } from './singup-form/singup-form.component';
     RouterModule.forRoot(routes),
     NgSemanticModule
   ],
-  providers: [ChatService,SessionService],
+  providers: [ChatService,SessionService,userService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

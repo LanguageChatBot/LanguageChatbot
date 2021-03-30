@@ -26,7 +26,7 @@ export class LoginFormComponent implements OnInit {
     this.session.login(this.username,this.password)
     .catch(e => this.error = e)
     .subscribe(user => {
-      if(user.username!=undefined){this.router.navigate(['/home'])}
+      if(user.username!=undefined){this.router.navigate(['/profile'])}
       console.log(`Welcome ${user.username}`)});
   }
 

@@ -1,11 +1,16 @@
 .chat{
     padding: 20px;
     margin: 0 auto;
-    height: 100%;
 }
+
+pre{
+    font-family: Helvetica, sans-serif;
+    font-size: 14px;
+}
+
 .conversations{
     padding: 20px;
-    height: 442px;
+    height: 600px;
     overflow-y: scroll;
     overflow-x: hidden;
 }
@@ -34,11 +39,27 @@ button{
     background: lightgray;
 }
 .other .text{
-    background: lightgreen;
+    background: rgb(75, 219, 190);
 }
 
 .text{
     padding: 8px 20px;
     border-radius: 15px;
     display: inline-block;
+}
+
+img{
+    border-radius: 15px;
+}
+
+.container {
+    height: 100%;
+  }
+
+.right{
+    float:right;
+}
+
+.user{
+    border-radius: 100%;
 }

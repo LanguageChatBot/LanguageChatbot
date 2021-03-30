@@ -3,15 +3,18 @@ import { SessionService } from '../services/session.service';
 import { Router } from '@angular/router';
 
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  title = 'Languinator';
   error:string;
-  constructor(public session:SessionService, private router:Router) { }
+
+  constructor(public session:SessionService, private router:Router) { 
+  }
 
   logout(){
     this.session.logout()

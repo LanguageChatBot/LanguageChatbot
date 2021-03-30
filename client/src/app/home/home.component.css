@@ -1,0 +1,51 @@
+h4{
+	font-size: 28px;
+	line-height: 50px;
+	color: rgb(83, 82, 82);
+}
+
+h5{
+	font-size: 18px;
+	color: rgb(83, 82, 82);
+}
+
+a{
+	color: rgba(142, 68, 173, 1)
+}
+
+.section {
+  height: 90%;
+	margin: 0;
+	padding: 0;
+	font-family: 'Helvetica', sans-serif;
+	background: rgb(26, 188, 156);
+	background: -moz-linear-gradient(-45deg, rgba(26, 188, 156, 1) 0%, rgba(142, 68, 173, 1) 100%);
+	background: -webkit-linear-gradient(-45deg, rgba(26, 188, 156, 1) 0%, rgba(142, 68, 173, 1) 100%);
+	background: linear-gradient(135deg, rgba(26, 188, 156, 1) 0%, rgba(142, 68, 173, 1) 100%);
+}
+
+.text {
+
+	margin-top: 6%;
+	color: rgb(83, 82, 82);
+	font-family: 'Helvetica', sans-serif;
+	text-align: center;
+
+}
+
+.imagen {
+
+	margin: 0 auto;
+	border-radius: 100%;
+
+}
+
+.row {
+
+	margin-top: 8%;
+	margin-bottom: 8%;
+
+}
+
+
+
