@@ -6,8 +6,8 @@
     "start": "node ./bin/www"
   },
   "dependencies": {
-    "axios": "^0.18.0",
-    "bcrypt": "^1.0.3",
+    "axios": "^0.21.1",
+    "bcrypt": "^5.0.0",
     "body-parser": "~1.17.1",
     "connect-mongo": "^2.0.1",
     "cookie-parser": "~1.4.3",
@@ -20,7 +20,7 @@
     "lodash": "^4.17.5",
     "lodash.invert": "^4.3.0",
     "mongoose": "^5.0.7",
-    "morgan": "~1.8.1",
+    "morgan": "1.9.1",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
     "request": "^2.83.0",
